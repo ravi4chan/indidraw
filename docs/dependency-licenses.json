@@ -1,0 +1,3696 @@
+{
+  "MIT": [
+    {
+      "name": "@antfu/install-pkg",
+      "versions": [
+        "2.1.0"
+      ],
+      "license": "MIT",
+      "author": "Anthony Fu",
+      "homepage": "https://github.com/antfu-collective/install-pkg#readme",
+      "description": "Install package programmatically."
+    },
+    {
+      "name": "@babel/runtime",
+      "versions": [
+        "7.29.10"
+      ],
+      "license": "MIT",
+      "author": "The Babel Team",
+      "homepage": "https://babel.dev/docs/en/next/babel-runtime",
+      "description": "babel's modular runtime helpers"
+    },
+    {
+      "name": "@braintree/sanitize-url",
+      "versions": [
+        "6.0.2",
+        "7.1.2"
+      ],
+      "license": "MIT",
+      "author": "",
+      "homepage": "https://github.com/braintree/sanitize-url#readme",
+      "description": "A url sanitizer"
+    },
+    {
+      "name": "@eslint-community/eslint-utils",
+      "versions": [
+        "4.10.1"
+      ],
+      "license": "MIT",
+      "author": "Toru Nagashima",
+      "homepage": "https://github.com/eslint-community/eslint-utils#readme",
+      "description": "Utilities for ESLint plugins."
+    },
+    {
+      "name": "@eslint-community/regexpp",
+      "versions": [
+        "4.12.2"
+      ],
+      "license": "MIT",
+      "author": "Toru Nagashima",
+      "homepage": "https://github.com/eslint-community/regexpp#readme",
+      "description": "Regular expression parser for ECMAScript."
+    },
+    {
+      "name": "@eslint/eslintrc",
+      "versions": [
+        "3.3.7"
+      ],
+      "license": "MIT",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/eslintrc#readme",
+      "description": "The legacy ESLintRC config file format for ESLint"
+    },
+    {
+      "name": "@eslint/js",
+      "versions": [
+        "9.39.5"
+      ],
+      "license": "MIT",
+      "homepage": "https://eslint.org",
+      "description": "ESLint JavaScript language implementation"
+    },
+    {
+      "name": "@excalidraw/excalidraw",
+      "versions": [
+        "0.18.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/excalidraw/excalidraw/tree/master/packages/excalidraw",
+      "description": "Excalidraw as a React component"
+    },
+    {
+      "name": "@excalidraw/laser-pointer",
+      "versions": [
+        "1.3.1"
+      ],
+      "license": "MIT",
+      "description": "Generate outline for laser pointer tool"
+    },
+    {
+      "name": "@excalidraw/markdown-to-text",
+      "versions": [
+        "0.1.2"
+      ],
+      "license": "MIT",
+      "author": "Daniel Esteves",
+      "homepage": "https://github.com/danestves/markdown-to-text.git",
+      "description": "Parse the markdown and returns a string"
+    },
+    {
+      "name": "@excalidraw/mermaid-to-excalidraw",
+      "versions": [
+        "2.2.2"
+      ],
+      "license": "MIT",
+      "description": "Mermaid to Excalidraw Diagrams"
+    },
+    {
+      "name": "@excalidraw/random-username",
+      "versions": [
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "author": "dwelle",
+      "homepage": "https://github.com/excalidraw/random-username#readme"
+    },
+    {
+      "name": "@floating-ui/core",
+      "versions": [
+        "1.8.0"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com",
+      "description": "Positioning library for floating elements: tooltips, popovers, dropdowns, and more"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "versions": [
+        "1.8.0"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com",
+      "description": "Floating UI for the web"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "versions": [
+        "2.1.9"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com/docs/react-dom",
+      "description": "Floating UI for React DOM"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "versions": [
+        "0.2.12"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com",
+      "description": "Utilities for Floating UI"
+    },
+    {
+      "name": "@iconify/types",
+      "versions": [
+        "2.0.0"
+      ],
+      "license": "MIT",
+      "author": "Vjacheslav Trushkin",
+      "homepage": "https://github.com/iconify/iconify",
+      "description": "Types for Iconify data"
+    },
+    {
+      "name": "@iconify/utils",
+      "versions": [
+        "3.1.7"
+      ],
+      "license": "MIT",
+      "author": "Vjacheslav Trushkin",
+      "homepage": "https://iconify.design/docs/libraries/utils/",
+      "description": "Common functions for working with Iconify icon sets used by various packages."
+    },
+    {
+      "name": "@indic-transliteration/common_maps",
+      "versions": [
+        "1.0.6"
+      ],
+      "license": "MIT",
+      "author": "Arun Prasad and Sanskrit coders",
+      "homepage": "https://github.com/indic-transliteration/common_maps#readme",
+      "description": "Shared string to string maps stored as TOML files, used for transliteration from one script to another. Example users: [sanscript.js](https://github.com/indic-transliteration/sanscript.js) and [indic-transliteration_py](https://github.com/indic-transliteration/indic-transliteration_py)."
+    },
+    {
+      "name": "@indic-transliteration/sanscript",
+      "versions": [
+        "1.3.3"
+      ],
+      "license": "MIT",
+      "author": "Arun Prasad and Sanskrit coders",
+      "homepage": "https://github.com/indic-transliteration/sanscript.js#readme",
+      "description": "Sanscript is a transliteration library for Indian languages. It supports the most popular Indian scripts and several different romanization schemes. Although Sanscript focuses on Sanskrit transliteration, it has partial support for other languages and is easy to extend."
+    },
+    {
+      "name": "@jridgewell/gen-mapping",
+      "versions": [
+        "0.3.13"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/gen-mapping",
+      "description": "Generate source maps"
+    },
+    {
+      "name": "@jridgewell/remapping",
+      "versions": [
+        "2.3.5"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/remapping",
+      "description": "Remap sequential sourcemaps through transformations to point at the original source code"
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "versions": [
+        "3.1.2"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/resolve-uri#readme",
+      "description": "Resolve a URI relative to an optional base URI"
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "versions": [
+        "1.6.0"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/sourcemap-codec",
+      "description": "Encode/decode sourcemap mappings"
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "versions": [
+        "0.3.31"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/trace-mapping",
+      "description": "Trace the original position through a source map"
+    },
+    {
+      "name": "@mermaid-js/parser",
+      "versions": [
+        "0.6.3",
+        "1.2.1"
+      ],
+      "license": "MIT",
+      "author": "Yokozuna59",
+      "homepage": "https://github.com/mermaid-js/mermaid/tree/develop/packages/mermaid/parser/#readme",
+      "description": "MermaidJS parser"
+    },
+    {
+      "name": "@oxc-project/types",
+      "versions": [
+        "0.155.0"
+      ],
+      "license": "MIT",
+      "author": "Boshen and oxc contributors",
+      "homepage": "https://oxc.rs",
+      "description": "Types for Oxc AST nodes"
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "versions": [
+        "1.0.0",
+        "1.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "versions": [
+        "1.1.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-collection",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "versions": [
+        "1.0.0",
+        "1.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "versions": [
+        "1.0.0",
+        "1.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-direction",
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "versions": [
+        "1.1.5"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "versions": [
+        "1.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "versions": [
+        "1.1.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-popover",
+      "versions": [
+        "1.1.6"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "versions": [
+        "1.2.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "versions": [
+        "1.1.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "versions": [
+        "1.0.0",
+        "1.1.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "versions": [
+        "1.0.1",
+        "2.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-roving-focus",
+      "versions": [
+        "1.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "versions": [
+        "1.0.1",
+        "1.1.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-tabs",
+      "versions": [
+        "1.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-escape-keydown",
+      "versions": [
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "versions": [
+        "1.0.0",
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-rect",
+      "versions": [
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "versions": [
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/rect",
+      "versions": [
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@rolldown/binding-darwin-arm64",
+      "versions": [
+        "1.2.15"
+      ],
+      "license": "MIT",
+      "homepage": "https://rolldown.rs/",
+      "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API."
+    },
+    {
+      "name": "@rolldown/pluginutils",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/rolldown/plugins/tree/main/packages/pluginutils#readme",
+      "description": "Plugin utilities for Rolldown"
+    },
+    {
+      "name": "@tailwindcss/node",
+      "versions": [
+        "4.3.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://tailwindcss.com",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces."
+    },
+    {
+      "name": "@tailwindcss/oxide",
+      "versions": [
+        "4.3.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tailwindlabs/tailwindcss#readme"
+    },
+    {
+      "name": "@tailwindcss/oxide-darwin-arm64",
+      "versions": [
+        "4.3.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tailwindlabs/tailwindcss#readme"
+    },
+    {
+      "name": "@tailwindcss/vite",
+      "versions": [
+        "4.3.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://tailwindcss.com",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces."
+    },
+    {
+      "name": "@types/chai",
+      "versions": [
+        "5.2.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/chai",
+      "description": "TypeScript definitions for chai"
+    },
+    {
+      "name": "@types/d3",
+      "versions": [
+        "7.4.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3",
+      "description": "TypeScript definitions for d3"
+    },
+    {
+      "name": "@types/d3-array",
+      "versions": [
+        "3.2.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-array",
+      "description": "TypeScript definitions for d3-array"
+    },
+    {
+      "name": "@types/d3-axis",
+      "versions": [
+        "3.0.6"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-axis",
+      "description": "TypeScript definitions for d3-axis"
+    },
+    {
+      "name": "@types/d3-brush",
+      "versions": [
+        "3.0.6"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-brush",
+      "description": "TypeScript definitions for d3-brush"
+    },
+    {
+      "name": "@types/d3-chord",
+      "versions": [
+        "3.0.6"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-chord",
+      "description": "TypeScript definitions for d3-chord"
+    },
+    {
+      "name": "@types/d3-color",
+      "versions": [
+        "3.1.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-color",
+      "description": "TypeScript definitions for d3-color"
+    },
+    {
+      "name": "@types/d3-contour",
+      "versions": [
+        "3.0.6"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-contour",
+      "description": "TypeScript definitions for d3-contour"
+    },
+    {
+      "name": "@types/d3-delaunay",
+      "versions": [
+        "6.0.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-delaunay",
+      "description": "TypeScript definitions for d3-delaunay"
+    },
+    {
+      "name": "@types/d3-dispatch",
+      "versions": [
+        "3.0.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-dispatch",
+      "description": "TypeScript definitions for d3-dispatch"
+    },
+    {
+      "name": "@types/d3-drag",
+      "versions": [
+        "3.0.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-drag",
+      "description": "TypeScript definitions for d3-drag"
+    },
+    {
+      "name": "@types/d3-dsv",
+      "versions": [
+        "3.0.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-dsv",
+      "description": "TypeScript definitions for d3-dsv"
+    },
+    {
+      "name": "@types/d3-ease",
+      "versions": [
+        "3.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-ease",
+      "description": "TypeScript definitions for d3-ease"
+    },
+    {
+      "name": "@types/d3-fetch",
+      "versions": [
+        "3.0.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-fetch",
+      "description": "TypeScript definitions for d3-fetch"
+    },
+    {
+      "name": "@types/d3-force",
+      "versions": [
+        "3.0.10"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-force",
+      "description": "TypeScript definitions for d3-force"
+    },
+    {
+      "name": "@types/d3-format",
+      "versions": [
+        "3.0.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-format",
+      "description": "TypeScript definitions for d3-format"
+    },
+    {
+      "name": "@types/d3-geo",
+      "versions": [
+        "3.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-geo",
+      "description": "TypeScript definitions for d3-geo"
+    },
+    {
+      "name": "@types/d3-hierarchy",
+      "versions": [
+        "3.1.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-hierarchy",
+      "description": "TypeScript definitions for d3-hierarchy"
+    },
+    {
+      "name": "@types/d3-interpolate",
+      "versions": [
+        "3.0.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-interpolate",
+      "description": "TypeScript definitions for d3-interpolate"
+    },
+    {
+      "name": "@types/d3-path",
+      "versions": [
+        "3.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-path",
+      "description": "TypeScript definitions for d3-path"
+    },
+    {
+      "name": "@types/d3-polygon",
+      "versions": [
+        "3.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-polygon",
+      "description": "TypeScript definitions for d3-polygon"
+    },
+    {
+      "name": "@types/d3-quadtree",
+      "versions": [
+        "3.0.6"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-quadtree",
+      "description": "TypeScript definitions for d3-quadtree"
+    },
+    {
+      "name": "@types/d3-random",
+      "versions": [
+        "3.0.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-random",
+      "description": "TypeScript definitions for d3-random"
+    },
+    {
+      "name": "@types/d3-scale",
+      "versions": [
+        "4.0.9"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-scale",
+      "description": "TypeScript definitions for d3-scale"
+    },
+    {
+      "name": "@types/d3-scale-chromatic",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-scale-chromatic",
+      "description": "TypeScript definitions for d3-scale-chromatic"
+    },
+    {
+      "name": "@types/d3-selection",
+      "versions": [
+        "3.0.12"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-selection",
+      "description": "TypeScript definitions for d3-selection"
+    },
+    {
+      "name": "@types/d3-shape",
+      "versions": [
+        "3.2.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-shape",
+      "description": "TypeScript definitions for d3-shape"
+    },
+    {
+      "name": "@types/d3-time",
+      "versions": [
+        "3.0.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-time",
+      "description": "TypeScript definitions for d3-time"
+    },
+    {
+      "name": "@types/d3-time-format",
+      "versions": [
+        "4.0.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-time-format",
+      "description": "TypeScript definitions for d3-time-format"
+    },
+    {
+      "name": "@types/d3-timer",
+      "versions": [
+        "3.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-timer",
+      "description": "TypeScript definitions for d3-timer"
+    },
+    {
+      "name": "@types/d3-transition",
+      "versions": [
+        "3.0.9"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-transition",
+      "description": "TypeScript definitions for d3-transition"
+    },
+    {
+      "name": "@types/d3-zoom",
+      "versions": [
+        "3.0.9"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-zoom",
+      "description": "TypeScript definitions for d3-zoom"
+    },
+    {
+      "name": "@types/deep-eql",
+      "versions": [
+        "4.0.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/deep-eql",
+      "description": "TypeScript definitions for deep-eql"
+    },
+    {
+      "name": "@types/estree",
+      "versions": [
+        "1.0.9"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree",
+      "description": "TypeScript definitions for estree"
+    },
+    {
+      "name": "@types/geojson",
+      "versions": [
+        "7946.0.16"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/geojson",
+      "description": "TypeScript definitions for geojson"
+    },
+    {
+      "name": "@types/json-schema",
+      "versions": [
+        "7.0.15"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/json-schema",
+      "description": "TypeScript definitions for json-schema"
+    },
+    {
+      "name": "@types/node",
+      "versions": [
+        "22.20.5"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+      "description": "TypeScript definitions for node"
+    },
+    {
+      "name": "@types/prop-types",
+      "versions": [
+        "15.7.15"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/prop-types",
+      "description": "TypeScript definitions for prop-types"
+    },
+    {
+      "name": "@types/react",
+      "versions": [
+        "18.3.31"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react",
+      "description": "TypeScript definitions for react"
+    },
+    {
+      "name": "@types/react-dom",
+      "versions": [
+        "18.3.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom",
+      "description": "TypeScript definitions for react-dom"
+    },
+    {
+      "name": "@types/trusted-types",
+      "versions": [
+        "2.0.7"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/trusted-types",
+      "description": "TypeScript definitions for trusted-types"
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/eslint-plugin",
+      "description": "TypeScript plugin for ESLint"
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/parser",
+      "description": "An ESLint custom parser which leverages TypeScript ESTree"
+    },
+    {
+      "name": "@typescript-eslint/project-service",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Standalone TypeScript project service wrapper for linting."
+    },
+    {
+      "name": "@typescript-eslint/scope-manager",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/scope-manager",
+      "description": "TypeScript scope analyser for ESLint"
+    },
+    {
+      "name": "@typescript-eslint/tsconfig-utils",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Utilities for collecting TSConfigs for linting scenarios."
+    },
+    {
+      "name": "@typescript-eslint/type-utils",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Type utilities for working with TypeScript + ESLint together"
+    },
+    {
+      "name": "@typescript-eslint/types",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Types for the TypeScript-ESTree AST spec"
+    },
+    {
+      "name": "@typescript-eslint/typescript-estree",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/typescript-estree",
+      "description": "A parser that converts TypeScript source code into an ESTree compatible form"
+    },
+    {
+      "name": "@typescript-eslint/utils",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/utils",
+      "description": "Utilities for working with TypeScript + ESLint together"
+    },
+    {
+      "name": "@typescript-eslint/visitor-keys",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io",
+      "description": "Visitor keys used to help traverse the TypeScript-ESTree AST"
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "versions": [
+        "2.0.0"
+      ],
+      "license": "MIT",
+      "author": "Ben Frederickson",
+      "homepage": "https://github.com/upsetjs/venn.js",
+      "description": "Area Proportional Venn and Euler Diagrams"
+    },
+    {
+      "name": "@vitest/mocker",
+      "versions": [
+        "5.0.5"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/vitest-dev/vitest/tree/main/packages/mocker",
+      "description": "Vitest module mocker implementation"
+    },
+    {
+      "name": "@vitest/spy",
+      "versions": [
+        "5.0.5"
+      ],
+      "license": "MIT",
+      "homepage": "https://vitest.dev/api/mock",
+      "description": "Lightweight Jest compatible spy implementation"
+    },
+    {
+      "name": "acorn",
+      "versions": [
+        "8.19.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/acornjs/acorn",
+      "description": "ECMAScript parser"
+    },
+    {
+      "name": "acorn-jsx",
+      "versions": [
+        "5.3.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/acornjs/acorn-jsx",
+      "description": "Modern, fast React.js JSX parser"
+    },
+    {
+      "name": "ajv",
+      "versions": [
+        "6.15.0"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/ajv-validator/ajv",
+      "description": "Another JSON Schema Validator"
+    },
+    {
+      "name": "ansi-styles",
+      "versions": [
+        "4.3.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/ansi-styles#readme",
+      "description": "ANSI escape codes for styling strings in the terminal"
+    },
+    {
+      "name": "aria-hidden",
+      "versions": [
+        "1.2.6"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/aria-hidden#readme",
+      "description": "Cast aria-hidden to everything, except..."
+    },
+    {
+      "name": "assertion-error",
+      "versions": [
+        "2.0.1"
+      ],
+      "license": "MIT",
+      "author": "Jake Luer",
+      "homepage": "https://github.com/chaijs/assertion-error#readme",
+      "description": "Error constructor for test and validation frameworks that implements standardized AssertionError specification."
+    },
+    {
+      "name": "balanced-match",
+      "versions": [
+        "1.0.2",
+        "4.0.4"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/juliangruber/balanced-match#readme",
+      "description": "Match balanced character pairs, like \"{\" and \"}\""
+    },
+    {
+      "name": "binary-extensions",
+      "versions": [
+        "2.3.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/binary-extensions#readme",
+      "description": "List of binary file extensions"
+    },
+    {
+      "name": "brace-expansion",
+      "versions": [
+        "1.1.21",
+        "5.0.12"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/juliangruber/brace-expansion#readme",
+      "description": "Brace expansion as known from sh/bash"
+    },
+    {
+      "name": "braces",
+      "versions": [
+        "3.0.3"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/micromatch/braces",
+      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed."
+    },
+    {
+      "name": "callsites",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/callsites#readme",
+      "description": "Get callsites from the V8 stack trace API"
+    },
+    {
+      "name": "canvas-roundrect-polyfill",
+      "versions": [
+        "0.0.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/Kaiido/roundRect#readme",
+      "description": "CanvasRenderingContext2D.roundRect() and Path2D.roundRect() polyfill"
+    },
+    {
+      "name": "chai",
+      "versions": [
+        "6.3.0"
+      ],
+      "license": "MIT",
+      "author": "Jake Luer",
+      "homepage": "http://chaijs.com",
+      "description": "BDD/TDD assertion library for node.js and the browser. Test framework agnostic."
+    },
+    {
+      "name": "chalk",
+      "versions": [
+        "4.1.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/chalk/chalk#readme",
+      "description": "Terminal string styling done right"
+    },
+    {
+      "name": "chevrotain-allstar",
+      "versions": [
+        "0.3.1"
+      ],
+      "license": "MIT",
+      "author": "TypeFox",
+      "homepage": "https://github.com/langium/chevrotain-allstar#readme",
+      "description": "LL(*) lookahead strategy for the Chevrotain parser library"
+    },
+    {
+      "name": "chokidar",
+      "versions": [
+        "3.6.0"
+      ],
+      "license": "MIT",
+      "author": "Paul Miller",
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "description": "Minimal and efficient cross-platform file watching library"
+    },
+    {
+      "name": "clsx",
+      "versions": [
+        "1.1.1"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/clsx#readme",
+      "description": "A tiny (228B) utility for constructing className strings conditionally."
+    },
+    {
+      "name": "color-convert",
+      "versions": [
+        "2.0.1"
+      ],
+      "license": "MIT",
+      "author": "Heather Arthur",
+      "homepage": "https://github.com/Qix-/color-convert#readme",
+      "description": "Plain color conversion functions"
+    },
+    {
+      "name": "color-name",
+      "versions": [
+        "1.1.4"
+      ],
+      "license": "MIT",
+      "author": "DY",
+      "homepage": "https://github.com/colorjs/color-name",
+      "description": "A list of color names and its values"
+    },
+    {
+      "name": "commander",
+      "versions": [
+        "7.2.0",
+        "8.3.0"
+      ],
+      "license": "MIT",
+      "author": "TJ Holowaychuk",
+      "homepage": "https://github.com/tj/commander.js#readme",
+      "description": "the complete solution for node.js command-line programs"
+    },
+    {
+      "name": "concat-map",
+      "versions": [
+        "0.0.1"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/substack/node-concat-map#readme",
+      "description": "concatenative mapdashery"
+    },
+    {
+      "name": "cose-base",
+      "versions": [
+        "1.0.3",
+        "2.2.0"
+      ],
+      "license": "MIT",
+      "author": "",
+      "homepage": "https://github.com/iVis-at-Bilkent/cose-base#readme",
+      "description": "Core module for compound spring embedder based layout styles"
+    },
+    {
+      "name": "cross-env",
+      "versions": [
+        "7.0.3"
+      ],
+      "license": "MIT",
+      "author": "Kent C. Dodds",
+      "homepage": "https://github.com/kentcdodds/cross-env#readme",
+      "description": "Run scripts that set and use environment variables across platforms"
+    },
+    {
+      "name": "cross-spawn",
+      "versions": [
+        "7.0.6"
+      ],
+      "license": "MIT",
+      "author": "André Cruz",
+      "homepage": "https://github.com/moxystudio/node-cross-spawn",
+      "description": "Cross platform child_process#spawn and child_process#spawnSync"
+    },
+    {
+      "name": "csstype",
+      "versions": [
+        "3.2.3"
+      ],
+      "license": "MIT",
+      "author": "Fredrik Nicol",
+      "homepage": "https://github.com/frenic/csstype#readme",
+      "description": "Strict TypeScript and Flow types for style based on MDN data"
+    },
+    {
+      "name": "cytoscape",
+      "versions": [
+        "3.34.4"
+      ],
+      "license": "MIT",
+      "homepage": "http://js.cytoscape.org",
+      "description": "Graph theory (a.k.a. network) library for analysis and visualisation"
+    },
+    {
+      "name": "cytoscape-cose-bilkent",
+      "versions": [
+        "4.1.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/cytoscape/cytoscape.js-cose-bilkent",
+      "description": "The CoSE layout for Cytoscape.js by Bilkent with enhanced compound node placement"
+    },
+    {
+      "name": "cytoscape-fcose",
+      "versions": [
+        "2.2.0"
+      ],
+      "license": "MIT",
+      "author": "iVis-at-Bilkent",
+      "homepage": "https://github.com/iVis-at-Bilkent/cytoscape.js-fcose",
+      "description": "The fCoSE layout for Cytoscape.js by Bilkent with fast compound node placement"
+    },
+    {
+      "name": "dagre-d3-es",
+      "versions": [
+        "7.0.14"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tbo47/dagre-es#readme",
+      "description": ""
+    },
+    {
+      "name": "dayjs",
+      "versions": [
+        "1.11.23"
+      ],
+      "license": "MIT",
+      "author": "iamkun",
+      "homepage": "https://day.js.org",
+      "description": "2KB immutable date time library alternative to Moment.js with the same modern API "
+    },
+    {
+      "name": "debug",
+      "versions": [
+        "4.4.3"
+      ],
+      "license": "MIT",
+      "author": "Josh Junon",
+      "homepage": "https://github.com/debug-js/debug#readme",
+      "description": "Lightweight debugging utility for Node.js and the browser"
+    },
+    {
+      "name": "deep-is",
+      "versions": [
+        "0.1.4"
+      ],
+      "license": "MIT",
+      "author": "Thorsten Lorenz",
+      "homepage": "https://github.com/thlorenz/deep-is#readme",
+      "description": "node's assert.deepEqual algorithm except for NaN being equal to NaN"
+    },
+    {
+      "name": "detect-node-es",
+      "versions": [
+        "1.1.0"
+      ],
+      "license": "MIT",
+      "author": "Ilya Kantor",
+      "homepage": "https://github.com/thekashey/detect-node",
+      "description": "Detect Node.JS (as opposite to browser environment). ESM modification"
+    },
+    {
+      "name": "enhanced-resolve",
+      "versions": [
+        "5.26.0"
+      ],
+      "license": "MIT",
+      "author": "Tobias Koppers @sokra",
+      "homepage": "https://github.com/webpack/enhanced-resolve#readme",
+      "description": "Offers a async require.resolve function. It's highly configurable."
+    },
+    {
+      "name": "es-module-lexer",
+      "versions": [
+        "2.3.2"
+      ],
+      "license": "MIT",
+      "author": "Guy Bedford",
+      "homepage": "https://github.com/guybedford/es-module-lexer#readme",
+      "description": "Lexes ES modules returning their import/export metadata"
+    },
+    {
+      "name": "es-toolkit",
+      "versions": [
+        "1.52.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://es-toolkit.dev",
+      "description": "A state-of-the-art, high-performance JavaScript utility library with a small bundle size and strong type annotations."
+    },
+    {
+      "name": "es6-promise-pool",
+      "versions": [
+        "2.5.0"
+      ],
+      "license": "MIT",
+      "author": "Tim De Pauw",
+      "homepage": "https://github.com/timdp/es6-promise-pool#readme",
+      "description": "Runs Promises in a pool that limits their concurrency."
+    },
+    {
+      "name": "escape-string-regexp",
+      "versions": [
+        "4.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/escape-string-regexp#readme",
+      "description": "Escape RegExp special characters"
+    },
+    {
+      "name": "eslint",
+      "versions": [
+        "9.39.5"
+      ],
+      "license": "MIT",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://eslint.org",
+      "description": "An AST-based pattern checker for JavaScript."
+    },
+    {
+      "name": "estree-walker",
+      "versions": [
+        "3.0.3"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://github.com/Rich-Harris/estree-walker#readme",
+      "description": "Traverse an ESTree-compliant AST"
+    },
+    {
+      "name": "fast-deep-equal",
+      "versions": [
+        "3.1.3"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/epoberezkin/fast-deep-equal#readme",
+      "description": "Fast deep equal"
+    },
+    {
+      "name": "fast-json-stable-stringify",
+      "versions": [
+        "2.1.0"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/epoberezkin/fast-json-stable-stringify",
+      "description": "deterministic `JSON.stringify()` - a faster version of substack's json-stable-strigify without jsonify"
+    },
+    {
+      "name": "fast-levenshtein",
+      "versions": [
+        "2.0.6"
+      ],
+      "license": "MIT",
+      "author": "Ramesh Nair",
+      "homepage": "https://github.com/hiddentao/fast-levenshtein#readme",
+      "description": "Efficient implementation of Levenshtein algorithm  with locale-specific collator support."
+    },
+    {
+      "name": "fastdom",
+      "versions": [
+        "1.0.12"
+      ],
+      "license": "MIT",
+      "author": "Wilson Page",
+      "homepage": "https://github.com/wilsonpage/fastdom",
+      "description": "Eliminates layout thrashing by batching DOM read/write operations"
+    },
+    {
+      "name": "fdir",
+      "versions": [
+        "6.5.0"
+      ],
+      "license": "MIT",
+      "author": "thecodrr",
+      "homepage": "https://github.com/thecodrr/fdir#readme",
+      "description": "The fastest directory crawler & globbing alternative to glob, fast-glob, & tiny-glob. Crawls 1m files in < 1s"
+    },
+    {
+      "name": "file-entry-cache",
+      "versions": [
+        "8.0.0"
+      ],
+      "license": "MIT",
+      "author": "Jared Wray",
+      "homepage": "https://github.com/jaredwray/file-entry-cache#readme",
+      "description": "Super simple cache for file metadata, useful for process that work o a given series of files and that only need to repeat the job on the changed ones since the previous run of the process"
+    },
+    {
+      "name": "fill-range",
+      "versions": [
+        "7.1.1"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/fill-range",
+      "description": "Fill in a range of numbers or letters, optionally passing an increment or `step` to use, or create a regex-compatible range with `options.toRegex`"
+    },
+    {
+      "name": "find-up",
+      "versions": [
+        "5.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/find-up#readme",
+      "description": "Find a file or directory by walking up parent directories"
+    },
+    {
+      "name": "flat-cache",
+      "versions": [
+        "4.0.1"
+      ],
+      "license": "MIT",
+      "author": "Jared Wray",
+      "homepage": "https://github.com/jaredwray/flat-cache#readme",
+      "description": "A stupidly simple key/value storage using files to persist some data"
+    },
+    {
+      "name": "fsevents",
+      "versions": [
+        "2.3.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/fsevents/fsevents",
+      "description": "Native Access to MacOS FSEvents"
+    },
+    {
+      "name": "fuzzy",
+      "versions": [
+        "0.1.3"
+      ],
+      "license": "MIT",
+      "author": "Matt York",
+      "homepage": "https://github.com/mattyork/fuzzy",
+      "description": "small, standalone fuzzy search / fuzzy filter. browser or node"
+    },
+    {
+      "name": "get-nonce",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/get-nonce",
+      "description": "returns nonce"
+    },
+    {
+      "name": "globals",
+      "versions": [
+        "14.0.0",
+        "15.15.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/globals#readme",
+      "description": "Global identifiers from different JavaScript environments"
+    },
+    {
+      "name": "glur",
+      "versions": [
+        "1.1.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/andr83/glur/issues",
+      "description": "Fast Gaussian Blur in pure JavaScript, via IIR filer. Speed does not depend on blur radius."
+    },
+    {
+      "name": "hachure-fill",
+      "versions": [
+        "0.5.2"
+      ],
+      "license": "MIT",
+      "author": "Preet Shihn",
+      "homepage": "https://github.com/pshihn/hachure-fill#readme",
+      "description": "Fill a polygon with lines "
+    },
+    {
+      "name": "has-flag",
+      "versions": [
+        "4.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/has-flag#readme",
+      "description": "Check if argv has a specific flag"
+    },
+    {
+      "name": "iconv-lite",
+      "versions": [
+        "0.6.3"
+      ],
+      "license": "MIT",
+      "author": "Alexander Shtuchkin",
+      "homepage": "https://github.com/ashtuchkin/iconv-lite",
+      "description": "Convert character encodings in pure javascript."
+    },
+    {
+      "name": "ignore",
+      "versions": [
+        "5.3.2",
+        "7.0.13"
+      ],
+      "license": "MIT",
+      "author": "kael",
+      "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+      "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others."
+    },
+    {
+      "name": "image-blob-reduce",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/nodeca/image-blob-reduce#readme",
+      "description": "High quality image resize in browser for blobs (`pica` wrapper with some sugar)"
+    },
+    {
+      "name": "immutable",
+      "versions": [
+        "4.3.9"
+      ],
+      "license": "MIT",
+      "author": "Lee Byron",
+      "homepage": "https://immutable-js.com",
+      "description": "Immutable Data Collections"
+    },
+    {
+      "name": "import-fresh",
+      "versions": [
+        "3.3.1"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/import-fresh#readme",
+      "description": "Import a module while bypassing the cache"
+    },
+    {
+      "name": "import-meta-resolve",
+      "versions": [
+        "4.2.0"
+      ],
+      "license": "MIT",
+      "author": "Titus Wormer",
+      "homepage": "https://github.com/wooorm/import-meta-resolve#readme",
+      "description": "Resolve things like Node.js — ponyfill for `import.meta.resolve`"
+    },
+    {
+      "name": "imurmurhash",
+      "versions": [
+        "0.1.4"
+      ],
+      "license": "MIT",
+      "author": "Jens Taylor",
+      "homepage": "https://github.com/jensyt/imurmurhash-js",
+      "description": "An incremental implementation of MurmurHash3"
+    },
+    {
+      "name": "is-binary-path",
+      "versions": [
+        "2.1.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/is-binary-path#readme",
+      "description": "Check if a file path is a binary file"
+    },
+    {
+      "name": "is-extglob",
+      "versions": [
+        "2.1.1"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/is-extglob",
+      "description": "Returns true if a string has an extglob."
+    },
+    {
+      "name": "is-glob",
+      "versions": [
+        "4.0.3"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/micromatch/is-glob",
+      "description": "Returns `true` if the given string looks like a glob pattern or an extglob pattern. This makes it easy to create code that only uses external modules like node-glob when necessary, resulting in much faster code execution and initialization time, and a better user experience."
+    },
+    {
+      "name": "is-number",
+      "versions": [
+        "7.0.0"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/is-number",
+      "description": "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc."
+    },
+    {
+      "name": "jiti",
+      "versions": [
+        "2.7.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/unjs/jiti#readme",
+      "description": "Runtime typescript and ESM support for Node.js"
+    },
+    {
+      "name": "jotai",
+      "versions": [
+        "2.11.0"
+      ],
+      "license": "MIT",
+      "author": "Daishi Kato",
+      "homepage": "https://github.com/pmndrs/jotai",
+      "description": "👻 Primitive and flexible state management for React"
+    },
+    {
+      "name": "jotai-scope",
+      "versions": [
+        "0.7.2"
+      ],
+      "license": "MIT",
+      "author": "Daishi Kato",
+      "homepage": "https://github.com/jotaijs/jotai-scope#readme",
+      "description": "👻🔭"
+    },
+    {
+      "name": "js-tokens",
+      "versions": [
+        "4.0.0"
+      ],
+      "license": "MIT",
+      "author": "Simon Lydell",
+      "homepage": "https://github.com/lydell/js-tokens#readme",
+      "description": "A regex that tokenizes JavaScript."
+    },
+    {
+      "name": "js-yaml",
+      "versions": [
+        "4.3.2"
+      ],
+      "license": "MIT",
+      "author": "Vladimir Zapparov",
+      "homepage": "https://github.com/nodeca/js-yaml#readme",
+      "description": "YAML 1.2 parser and serializer"
+    },
+    {
+      "name": "json-buffer",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "MIT",
+      "author": "Dominic Tarr",
+      "homepage": "https://github.com/dominictarr/json-buffer",
+      "description": "JSON parse & stringify that supports binary via bops & base64"
+    },
+    {
+      "name": "json-schema-traverse",
+      "versions": [
+        "0.4.1"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/epoberezkin/json-schema-traverse#readme",
+      "description": "Traverse JSON Schema passing each schema object to callback"
+    },
+    {
+      "name": "json-stable-stringify-without-jsonify",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/samn/json-stable-stringify",
+      "description": "deterministic JSON.stringify() with custom sorting to get deterministic hashes from stringified results, with no public domain dependencies"
+    },
+    {
+      "name": "katex",
+      "versions": [
+        "0.18.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://katex.org",
+      "description": "Fast math typesetting for the web."
+    },
+    {
+      "name": "keyv",
+      "versions": [
+        "4.5.4"
+      ],
+      "license": "MIT",
+      "author": "Jared Wray",
+      "homepage": "https://github.com/jaredwray/keyv",
+      "description": "Simple key-value storage with support for multiple backends"
+    },
+    {
+      "name": "langium",
+      "versions": [
+        "3.3.1"
+      ],
+      "license": "MIT",
+      "author": "TypeFox",
+      "homepage": "https://langium.org",
+      "description": "A language engineering tool for the Language Server Protocol"
+    },
+    {
+      "name": "layout-base",
+      "versions": [
+        "1.0.2",
+        "2.0.1"
+      ],
+      "license": "MIT",
+      "author": "",
+      "homepage": "https://github.com/iVis-at-Bilkent/layout-base#readme",
+      "description": "Basic layout model and some utilities for Cytoscape.js layout extensions"
+    },
+    {
+      "name": "levn",
+      "versions": [
+        "0.4.1"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "https://github.com/gkz/levn",
+      "description": "Light ECMAScript (JavaScript) Value Notation - human written, concise, typed, flexible"
+    },
+    {
+      "name": "locate-path",
+      "versions": [
+        "6.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/locate-path#readme",
+      "description": "Get the first path that exists on disk of multiple paths"
+    },
+    {
+      "name": "lodash-es",
+      "versions": [
+        "4.18.1"
+      ],
+      "license": "MIT",
+      "author": "John-David Dalton",
+      "homepage": "https://lodash.com/custom-builds",
+      "description": "Lodash exported as ES modules."
+    },
+    {
+      "name": "lodash.debounce",
+      "versions": [
+        "4.0.8"
+      ],
+      "license": "MIT",
+      "author": "John-David Dalton",
+      "homepage": "https://lodash.com/",
+      "description": "The lodash method `_.debounce` exported as a module."
+    },
+    {
+      "name": "lodash.merge",
+      "versions": [
+        "4.6.2"
+      ],
+      "license": "MIT",
+      "author": "John-David Dalton",
+      "homepage": "https://lodash.com/",
+      "description": "The Lodash method `_.merge` exported as a module."
+    },
+    {
+      "name": "lodash.throttle",
+      "versions": [
+        "4.1.1"
+      ],
+      "license": "MIT",
+      "author": "John-David Dalton",
+      "homepage": "https://lodash.com/",
+      "description": "The lodash method `_.throttle` exported as a module."
+    },
+    {
+      "name": "loose-envify",
+      "versions": [
+        "1.4.0"
+      ],
+      "license": "MIT",
+      "author": "Andres Suarez",
+      "homepage": "https://github.com/zertosh/loose-envify",
+      "description": "Fast (and loose) selective `process.env` replacer using js-tokens instead of an AST"
+    },
+    {
+      "name": "magic-string",
+      "versions": [
+        "0.30.21",
+        "1.4.3"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://github.com/Rich-Harris/magic-string#readme",
+      "description": "Modify strings, generate sourcemaps"
+    },
+    {
+      "name": "marked",
+      "versions": [
+        "16.4.2"
+      ],
+      "license": "MIT",
+      "author": "Christopher Jeffrey",
+      "homepage": "https://marked.js.org",
+      "description": "A markdown parser built for speed"
+    },
+    {
+      "name": "mermaid",
+      "versions": [
+        "11.17.2"
+      ],
+      "license": "MIT",
+      "author": "Knut Sveidqvist",
+      "homepage": "https://github.com/mermaid-js/mermaid#readme",
+      "description": "Markdown-ish syntax for generating flowcharts, mindmaps, sequence diagrams, class diagrams, gantt charts, git graphs and more."
+    },
+    {
+      "name": "ms",
+      "versions": [
+        "2.1.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/vercel/ms#readme",
+      "description": "Tiny millisecond conversion utility"
+    },
+    {
+      "name": "multimath",
+      "versions": [
+        "2.0.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/nodeca/multimath#readme",
+      "description": "Core to create fast image math in WebAssembly and JS."
+    },
+    {
+      "name": "nanoid",
+      "versions": [
+        "3.3.18",
+        "5.1.16"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://github.com/ai/nanoid#readme",
+      "description": "A tiny (118 bytes), secure URL-friendly unique string ID generator"
+    },
+    {
+      "name": "natural-compare",
+      "versions": [
+        "1.4.0"
+      ],
+      "license": "MIT",
+      "author": "Lauri Rooden",
+      "homepage": "https://github.com/litejs/natural-compare-lite#readme",
+      "description": "Compare strings containing a mix of letters and numbers in the way a human being would in sort order."
+    },
+    {
+      "name": "normalize-path",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/normalize-path",
+      "description": "Normalize slashes in a file path to be posix/unix-like forward slashes. Also condenses repeat slashes to a single slash and removes and trailing slashes, unless disabled."
+    },
+    {
+      "name": "object-assign",
+      "versions": [
+        "4.1.1"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/object-assign#readme",
+      "description": "ES2015 `Object.assign()` ponyfill"
+    },
+    {
+      "name": "obug",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "MIT",
+      "author": "Kevin Deng",
+      "homepage": "https://github.com/sxzz/obug#readme",
+      "description": "A lightweight JavaScript debugging utility, forked from debug, featuring TypeScript and ESM support."
+    },
+    {
+      "name": "open-color",
+      "versions": [
+        "1.9.1"
+      ],
+      "license": "MIT",
+      "author": "Jeong Heeyeun",
+      "homepage": "https://github.com/yeun/open-color",
+      "description": "Open color scheme for web UI"
+    },
+    {
+      "name": "optionator",
+      "versions": [
+        "0.9.4"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "https://github.com/gkz/optionator",
+      "description": "option parsing and help generation"
+    },
+    {
+      "name": "p-limit",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/p-limit#readme",
+      "description": "Run multiple promise-returning & async functions with limited concurrency"
+    },
+    {
+      "name": "p-locate",
+      "versions": [
+        "5.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/p-locate#readme",
+      "description": "Get the first fulfilled promise that satisfies the provided testing function"
+    },
+    {
+      "name": "package-manager-detector",
+      "versions": [
+        "1.9.0"
+      ],
+      "license": "MIT",
+      "author": "Anthony Fu",
+      "homepage": "https://github.com/antfu-collective/package-manager-detector#readme",
+      "description": "Package manager detector"
+    },
+    {
+      "name": "parent-module",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/parent-module#readme",
+      "description": "Get the path of the parent module"
+    },
+    {
+      "name": "path-data-parser",
+      "versions": [
+        "0.1.0"
+      ],
+      "license": "MIT",
+      "author": "Preet Shihn",
+      "homepage": "https://github.com/pshihn/path-data-parser#readme",
+      "description": "Yet another SVG path parser. This one's tiny"
+    },
+    {
+      "name": "path-exists",
+      "versions": [
+        "4.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/path-exists#readme",
+      "description": "Check if a path exists"
+    },
+    {
+      "name": "path-key",
+      "versions": [
+        "3.1.1"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/path-key#readme",
+      "description": "Get the PATH environment variable key cross-platform"
+    },
+    {
+      "name": "perfect-freehand",
+      "versions": [
+        "1.2.0"
+      ],
+      "license": "MIT",
+      "author": "Steve Ruiz",
+      "homepage": "https://github.com/steveruizok/perfect-freehand#readme",
+      "description": "Draw perfect pressure-sensitive freehand strokes."
+    },
+    {
+      "name": "pica",
+      "versions": [
+        "7.1.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/nodeca/pica",
+      "description": "High quality image resize in browser."
+    },
+    {
+      "name": "picomatch",
+      "versions": [
+        "2.3.2",
+        "4.0.7"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/micromatch/picomatch",
+      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions."
+    },
+    {
+      "name": "png-chunk-text",
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "author": "Hugh Kennedy",
+      "homepage": "https://github.com/hughsk/png-chunk-text",
+      "description": "Create or parse a PNG tEXt chunk for storing uncompressed text data in PNG images"
+    },
+    {
+      "name": "png-chunks-encode",
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "author": "Hugh Kennedy",
+      "homepage": "https://github.com/hughsk/png-chunks-encode",
+      "description": "Return a fresh PNG buffer given a set of PNG chunks"
+    },
+    {
+      "name": "png-chunks-extract",
+      "versions": [
+        "1.0.0"
+      ],
+      "license": "MIT",
+      "author": "Hugh Kennedy",
+      "homepage": "https://github.com/hughsk/png-chunks-extract",
+      "description": "Extract the data chunks from a PNG file"
+    },
+    {
+      "name": "points-on-curve",
+      "versions": [
+        "0.2.0",
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "author": "Preet Shihn",
+      "homepage": "https://github.com/pshihn/bezier-points#readme",
+      "description": "Estimate points on a bezier curve or a set of connexted bezier curves"
+    },
+    {
+      "name": "points-on-path",
+      "versions": [
+        "0.2.1"
+      ],
+      "license": "MIT",
+      "author": "Preet Shihn",
+      "homepage": "https://github.com/pshihn/points-on-path#readme",
+      "description": "Estimate points on a SVG path"
+    },
+    {
+      "name": "postcss",
+      "versions": [
+        "8.5.31"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://postcss.org/",
+      "description": "Tool for transforming styles with JS plugins"
+    },
+    {
+      "name": "prelude-ls",
+      "versions": [
+        "1.2.1"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "http://preludels.com",
+      "description": "prelude.ls is a functionally oriented utility library. It is powerful and flexible. Almost all of its functions are curried. It is written in, and is the recommended base library for, LiveScript."
+    },
+    {
+      "name": "prettier",
+      "versions": [
+        "3.9.10"
+      ],
+      "license": "MIT",
+      "author": "James Long",
+      "homepage": "https://prettier.io",
+      "description": "Prettier is an opinionated code formatter"
+    },
+    {
+      "name": "punycode",
+      "versions": [
+        "2.3.1"
+      ],
+      "license": "MIT",
+      "author": "Mathias Bynens",
+      "homepage": "https://mths.be/punycode",
+      "description": "A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms."
+    },
+    {
+      "name": "react",
+      "versions": [
+        "18.3.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://reactjs.org/",
+      "description": "React is a JavaScript library for building user interfaces."
+    },
+    {
+      "name": "react-dom",
+      "versions": [
+        "18.3.1"
+      ],
+      "license": "MIT",
+      "homepage": "https://reactjs.org/",
+      "description": "React package for working with the DOM."
+    },
+    {
+      "name": "react-remove-scroll",
+      "versions": [
+        "2.7.2"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/react-remove-scroll#readme",
+      "description": "Disables scroll outside of `children` node."
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "versions": [
+        "2.3.8"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/react-remove-scroll-bar#readme",
+      "description": "Removes body scroll without content _shake_"
+    },
+    {
+      "name": "react-style-singleton",
+      "versions": [
+        "2.2.3"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/react-style-singleton#readme",
+      "description": "Just create a single stylesheet..."
+    },
+    {
+      "name": "readdirp",
+      "versions": [
+        "3.6.0"
+      ],
+      "license": "MIT",
+      "author": "Thorsten Lorenz",
+      "homepage": "https://github.com/paulmillr/readdirp",
+      "description": "Recursive version of fs.readdir with streaming API."
+    },
+    {
+      "name": "resolve-from",
+      "versions": [
+        "4.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/resolve-from#readme",
+      "description": "Resolve the path of a module like `require.resolve()` but from a given path"
+    },
+    {
+      "name": "rolldown",
+      "versions": [
+        "1.2.15"
+      ],
+      "license": "MIT",
+      "homepage": "https://rolldown.rs/",
+      "description": "Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API."
+    },
+    {
+      "name": "roughjs",
+      "versions": [
+        "4.6.4",
+        "4.6.6"
+      ],
+      "license": "MIT",
+      "author": "Preet Shihn",
+      "homepage": "https://roughjs.com",
+      "description": "Create graphics using HTML Canvas or SVG with a hand-drawn, sketchy, appearance."
+    },
+    {
+      "name": "safer-buffer",
+      "versions": [
+        "2.1.2"
+      ],
+      "license": "MIT",
+      "author": "Nikita Skovoroda",
+      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
+      "description": "Modern Buffer API polyfill without footguns"
+    },
+    {
+      "name": "sass",
+      "versions": [
+        "1.51.0"
+      ],
+      "license": "MIT",
+      "author": "Natalie Weizenbaum",
+      "homepage": "https://github.com/sass/dart-sass",
+      "description": "A pure JavaScript implementation of Sass."
+    },
+    {
+      "name": "scheduler",
+      "versions": [
+        "0.23.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://reactjs.org/",
+      "description": "Cooperative scheduler for the browser environment."
+    },
+    {
+      "name": "shebang-command",
+      "versions": [
+        "2.0.0"
+      ],
+      "license": "MIT",
+      "author": "Kevin Mårtensson",
+      "homepage": "https://github.com/kevva/shebang-command#readme",
+      "description": "Get the command from a shebang"
+    },
+    {
+      "name": "shebang-regex",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/shebang-regex#readme",
+      "description": "Regular expression for matching a shebang line"
+    },
+    {
+      "name": "sliced",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "author": "Aaron Heckmann",
+      "homepage": "https://github.com/aheckmann/sliced#readme",
+      "description": "A faster Node.js alternative to Array.prototype.slice.call(arguments)"
+    },
+    {
+      "name": "std-env",
+      "versions": [
+        "4.3.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/unjs/std-env#readme",
+      "description": "Runtime agnostic JS utils"
+    },
+    {
+      "name": "strictdom",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "MIT",
+      "author": "Wilson Page",
+      "homepage": "https://github.com/wilsonpage/strictdom",
+      "description": "Throws errors when performance sensitive DOM APIs are called out of 'phase'"
+    },
+    {
+      "name": "strip-json-comments",
+      "versions": [
+        "3.1.1"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/strip-json-comments#readme",
+      "description": "Strip comments from JSON. Lets you use comments in your JSON files!"
+    },
+    {
+      "name": "stylis",
+      "versions": [
+        "4.4.0"
+      ],
+      "license": "MIT",
+      "author": "Sultan Tarimo",
+      "homepage": "https://github.com/thysultan/stylis.js",
+      "description": "A Light–weight CSS Preprocessor"
+    },
+    {
+      "name": "supports-color",
+      "versions": [
+        "7.2.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/supports-color#readme",
+      "description": "Detect whether a terminal supports color"
+    },
+    {
+      "name": "tailwindcss",
+      "versions": [
+        "4.3.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://tailwindcss.com",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces."
+    },
+    {
+      "name": "tapable",
+      "versions": [
+        "2.3.3"
+      ],
+      "license": "MIT",
+      "author": "Tobias Koppers @sokra",
+      "homepage": "https://github.com/webpack/tapable",
+      "description": "Just a little module for plugins."
+    },
+    {
+      "name": "tinybench",
+      "versions": [
+        "6.2.2"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tinylibs/tinybench#readme",
+      "description": "🔎 A simple, tiny and lightweight benchmarking library!"
+    },
+    {
+      "name": "tinyexec",
+      "versions": [
+        "1.3.1"
+      ],
+      "license": "MIT",
+      "author": "James Garbutt",
+      "homepage": "https://github.com/tinylibs/tinyexec#readme",
+      "description": "A minimal library for executing processes in Node"
+    },
+    {
+      "name": "tinyglobby",
+      "versions": [
+        "0.2.17"
+      ],
+      "license": "MIT",
+      "author": "Superchupu",
+      "homepage": "https://superchupu.dev/tinyglobby",
+      "description": "A fast and minimal alternative to globby and fast-glob"
+    },
+    {
+      "name": "to-regex-range",
+      "versions": [
+        "5.0.1"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/micromatch/to-regex-range",
+      "description": "Pass two numbers, get a regex-compatible source string for matching ranges. Validated against more than 2.78 million test assertions."
+    },
+    {
+      "name": "toml",
+      "versions": [
+        "2.3.6"
+      ],
+      "license": "MIT",
+      "author": "Michelle Tilley <michelle@michelletilley.net>",
+      "homepage": "",
+      "description": "TOML parser for Node.js (parses TOML spec v0.4.0)"
+    },
+    {
+      "name": "ts-api-utils",
+      "versions": [
+        "2.5.0"
+      ],
+      "license": "MIT",
+      "author": "JoshuaKGoldberg",
+      "homepage": "https://github.com/JoshuaKGoldberg/ts-api-utils#readme",
+      "description": "Utility functions for working with TypeScript's API. Successor to the wonderful tsutils. 🛠️️"
+    },
+    {
+      "name": "ts-dedent",
+      "versions": [
+        "2.3.0"
+      ],
+      "license": "MIT",
+      "author": "Tamino Martinius",
+      "homepage": "https://github.com/tamino-martinius/node-ts-dedent#readme",
+      "description": "TypeScript package which smartly trims and strips indentation from multi-line strings"
+    },
+    {
+      "name": "tunnel-rat",
+      "versions": [
+        "0.1.2"
+      ],
+      "license": "MIT",
+      "author": "Paul Henschel",
+      "homepage": "https://github.com/pmndrs/tunnel-rat#readme",
+      "description": "non gratum anus rodentum"
+    },
+    {
+      "name": "type-check",
+      "versions": [
+        "0.4.0"
+      ],
+      "license": "MIT",
+      "author": "George Zahariev",
+      "homepage": "https://github.com/gkz/type-check",
+      "description": "type-check allows you to check the types of JavaScript values at runtime with a Haskell like type syntax."
+    },
+    {
+      "name": "typescript-eslint",
+      "versions": [
+        "8.72.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://typescript-eslint.io/packages/typescript-eslint",
+      "description": "Tooling which enables you to use TypeScript with ESLint"
+    },
+    {
+      "name": "undici-types",
+      "versions": [
+        "6.21.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://undici.nodejs.org",
+      "description": "A stand-alone types package for Undici"
+    },
+    {
+      "name": "use-callback-ref",
+      "versions": [
+        "1.3.3"
+      ],
+      "license": "MIT",
+      "author": "theKashey",
+      "homepage": "https://github.com/theKashey/use-callback-ref#readme",
+      "description": "The same useRef, but with callback"
+    },
+    {
+      "name": "use-sidecar",
+      "versions": [
+        "1.1.3"
+      ],
+      "license": "MIT",
+      "author": "theKashey",
+      "homepage": "https://github.com/theKashey/use-sidecar",
+      "description": "Sidecar code splitting utils"
+    },
+    {
+      "name": "use-sync-external-store",
+      "versions": [
+        "1.7.0"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/react/react#readme",
+      "description": "Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks."
+    },
+    {
+      "name": "uuid",
+      "versions": [
+        "14.0.3"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "description": "RFC9562 UUIDs"
+    },
+    {
+      "name": "vite",
+      "versions": [
+        "8.3.5"
+      ],
+      "license": "MIT",
+      "author": "Evan You",
+      "homepage": "https://vite.dev",
+      "description": "Native-ESM powered web dev build tool"
+    },
+    {
+      "name": "vitest",
+      "versions": [
+        "5.0.5"
+      ],
+      "license": "MIT",
+      "author": "Anthony Fu",
+      "homepage": "https://vitest.dev",
+      "description": "Next generation testing framework powered by Vite"
+    },
+    {
+      "name": "vscode-jsonrpc",
+      "versions": [
+        "8.2.0"
+      ],
+      "license": "MIT",
+      "author": "Microsoft Corporation",
+      "homepage": "https://github.com/Microsoft/vscode-languageserver-node#readme",
+      "description": "A json rpc implementation over streams"
+    },
+    {
+      "name": "vscode-languageserver",
+      "versions": [
+        "9.0.1"
+      ],
+      "license": "MIT",
+      "author": "Microsoft Corporation",
+      "homepage": "https://github.com/Microsoft/vscode-languageserver-node#readme",
+      "description": "Language server implementation for node"
+    },
+    {
+      "name": "vscode-languageserver-protocol",
+      "versions": [
+        "3.17.5"
+      ],
+      "license": "MIT",
+      "author": "Microsoft Corporation",
+      "homepage": "https://github.com/Microsoft/vscode-languageserver-node#readme",
+      "description": "VSCode Language Server Protocol implementation"
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "versions": [
+        "1.0.15"
+      ],
+      "license": "MIT",
+      "author": "Microsoft Corporation",
+      "homepage": "https://github.com/Microsoft/vscode-languageserver-node#readme",
+      "description": "A simple text document implementation for Node LSP servers"
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "versions": [
+        "3.17.5"
+      ],
+      "license": "MIT",
+      "author": "Microsoft Corporation",
+      "homepage": "https://github.com/Microsoft/vscode-languageserver-node#readme",
+      "description": "Types used by the Language server for node"
+    },
+    {
+      "name": "vscode-uri",
+      "versions": [
+        "3.0.8"
+      ],
+      "license": "MIT",
+      "author": "Microsoft",
+      "homepage": "https://github.com/microsoft/vscode-uri#readme",
+      "description": "The URI implementation that is used by VS Code and its extensions"
+    },
+    {
+      "name": "webworkify",
+      "versions": [
+        "1.5.0"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/substack/webworkify",
+      "description": "launch a web worker that can require() in the browser with browserify"
+    },
+    {
+      "name": "why-is-node-running",
+      "versions": [
+        "3.2.1"
+      ],
+      "license": "MIT",
+      "author": "Mathias Buus",
+      "homepage": "https://github.com/mafintosh/why-is-node-running",
+      "description": "Node is running but you don't know why? why-is-node-running is here to help you."
+    },
+    {
+      "name": "word-wrap",
+      "versions": [
+        "1.2.5"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/jonschlinkert/word-wrap",
+      "description": "Wrap words to a specified length."
+    },
+    {
+      "name": "yocto-queue",
+      "versions": [
+        "0.1.0"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/yocto-queue#readme",
+      "description": "Tiny queue data structure"
+    },
+    {
+      "name": "zustand",
+      "versions": [
+        "4.5.7"
+      ],
+      "license": "MIT",
+      "author": "Paul Henschel",
+      "homepage": "https://github.com/pmndrs/zustand",
+      "description": "🐻 Bear necessities for state management in React"
+    }
+  ],
+  "MPL-2.0": [
+    {
+      "name": "@axe-core/playwright",
+      "versions": [
+        "4.14.0"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/dequelabs/axe-core-npm#readme",
+      "description": "Provides a method to inject and analyze web pages using axe"
+    },
+    {
+      "name": "axe-core",
+      "versions": [
+        "4.14.0"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://www.deque.com/axe/",
+      "description": "Accessibility engine for automated Web UI testing"
+    },
+    {
+      "name": "lightningcss",
+      "versions": [
+        "1.32.0",
+        "1.33.0"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/parcel-bundler/lightningcss#readme",
+      "description": "A CSS parser, transformer, and minifier written in Rust"
+    },
+    {
+      "name": "lightningcss-darwin-arm64",
+      "versions": [
+        "1.32.0",
+        "1.33.0"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/parcel-bundler/lightningcss#readme",
+      "description": "A CSS parser, transformer, and minifier written in Rust"
+    }
+  ],
+  "Apache-2.0": [
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "versions": [
+        "11.0.3"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/Chevrotain/chevrotain#readme",
+      "description": "Generates type definitions for Chevrotain CST nodes"
+    },
+    {
+      "name": "@chevrotain/gast",
+      "versions": [
+        "11.0.3"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/Chevrotain/chevrotain#readme",
+      "description": "Grammar AST structure for Chevrotain Parsers"
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "versions": [
+        "11.0.3"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/Chevrotain/chevrotain#readme",
+      "description": "Parses a Regular Expression and outputs an AST"
+    },
+    {
+      "name": "@chevrotain/types",
+      "versions": [
+        "11.0.3",
+        "11.1.2"
+      ],
+      "license": "Apache-2.0",
+      "author": "Shahar Soel",
+      "homepage": "https://chevrotain.io/documentation/",
+      "description": "Type Signatures and API Website for Chevrotain"
+    },
+    {
+      "name": "@chevrotain/utils",
+      "versions": [
+        "11.0.3"
+      ],
+      "license": "Apache-2.0",
+      "author": "Shahar Soel",
+      "homepage": "https://github.com/Chevrotain/chevrotain#readme",
+      "description": "common utilities"
+    },
+    {
+      "name": "@eslint/config-array",
+      "versions": [
+        "0.21.2"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/config-array#readme",
+      "description": "General purpose glob-based configuration matching."
+    },
+    {
+      "name": "@eslint/config-helpers",
+      "versions": [
+        "0.4.2"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/config-helpers#readme",
+      "description": "Helper utilities for creating ESLint configuration"
+    },
+    {
+      "name": "@eslint/core",
+      "versions": [
+        "0.17.0"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/core#readme",
+      "description": "Runtime-agnostic core of ESLint"
+    },
+    {
+      "name": "@eslint/object-schema",
+      "versions": [
+        "2.1.7"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/object-schema#readme",
+      "description": "An object schema merger/validator"
+    },
+    {
+      "name": "@eslint/plugin-kit",
+      "versions": [
+        "0.4.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/rewrite/tree/main/packages/plugin-kit#readme",
+      "description": "Utilities for building ESLint plugins."
+    },
+    {
+      "name": "@humanfs/core",
+      "versions": [
+        "0.19.2"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/humanwhocodes/humanfs#readme",
+      "description": "The core of the humanfs library."
+    },
+    {
+      "name": "@humanfs/node",
+      "versions": [
+        "0.16.8"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/humanwhocodes/humanfs#readme",
+      "description": "The Node.js bindings of the humanfs library."
+    },
+    {
+      "name": "@humanfs/types",
+      "versions": [
+        "0.15.0"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/humanwhocodes/humanfs#readme",
+      "description": "The TypeScript types for the hfs project."
+    },
+    {
+      "name": "@humanwhocodes/module-importer",
+      "versions": [
+        "1.0.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zaks",
+      "homepage": "https://github.com/humanwhocodes/module-importer#readme",
+      "description": "Universal module importer for Node.js"
+    },
+    {
+      "name": "@humanwhocodes/retry",
+      "versions": [
+        "0.4.3"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nicholas C. Zaks",
+      "homepage": "https://github.com/humanwhocodes/retry#readme",
+      "description": "A utility to retry failed async methods."
+    },
+    {
+      "name": "@playwright/test",
+      "versions": [
+        "1.64.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corporation",
+      "homepage": "https://playwright.dev",
+      "description": "A high-level API to automate web browsers"
+    },
+    {
+      "name": "browser-fs-access",
+      "versions": [
+        "0.29.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Thomas Steiner",
+      "homepage": "https://github.com/GoogleChromeLabs/browser-fs-access#readme",
+      "description": "File System Access API with legacy fallback in the browser."
+    },
+    {
+      "name": "chevrotain",
+      "versions": [
+        "11.0.3"
+      ],
+      "license": "Apache-2.0",
+      "author": "Shahar Soel",
+      "homepage": "https://chevrotain.io/docs/",
+      "description": "Chevrotain is a high performance fault tolerant javascript parsing DSL for building recursive decent parsers"
+    },
+    {
+      "name": "crc-32",
+      "versions": [
+        "0.3.0"
+      ],
+      "license": "Apache-2.0",
+      "author": "sheetjs",
+      "homepage": "https://github.com/SheetJS/js-crc32#readme",
+      "description": "Pure-JS CRC-32"
+    },
+    {
+      "name": "detect-libc",
+      "versions": [
+        "2.1.2"
+      ],
+      "license": "Apache-2.0",
+      "author": "Lovell Fuller",
+      "homepage": "https://github.com/lovell/detect-libc#readme",
+      "description": "Node.js module to detect the C standard library (libc) implementation family and version"
+    },
+    {
+      "name": "eslint-visitor-keys",
+      "versions": [
+        "3.4.3",
+        "4.2.1",
+        "5.0.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Toru Nagashima",
+      "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-visitor-keys/README.md",
+      "description": "Constants and utilities about visitor keys to traverse AST."
+    },
+    {
+      "name": "expect-type",
+      "versions": [
+        "1.4.0"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/mmkal/expect-type#readme"
+    },
+    {
+      "name": "fake-indexeddb",
+      "versions": [
+        "6.2.6"
+      ],
+      "license": "Apache-2.0",
+      "author": "Jeremy Scheff",
+      "homepage": "https://github.com/dumbmatter/fakeIndexedDB",
+      "description": "Fake IndexedDB: a pure JS in-memory implementation of the IndexedDB API"
+    },
+    {
+      "name": "playwright",
+      "versions": [
+        "1.64.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corporation",
+      "homepage": "https://playwright.dev",
+      "description": "A high-level API to automate web browsers"
+    },
+    {
+      "name": "playwright-core",
+      "versions": [
+        "1.64.1"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corporation",
+      "homepage": "https://playwright.dev",
+      "description": "A high-level API to automate web browsers"
+    },
+    {
+      "name": "pwacompat",
+      "versions": [
+        "2.0.17"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/GoogleChrome/pwacompat",
+      "description": "library to bring Web App Manifest contents to non-compliant browsers"
+    },
+    {
+      "name": "typescript",
+      "versions": [
+        "5.7.3"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corp.",
+      "homepage": "https://www.typescriptlang.org/",
+      "description": "TypeScript is a language for application scale JavaScript development"
+    }
+  ],
+  "OFL-1.1": [
+    {
+      "name": "@fontsource/noto-sans-bengali",
+      "versions": [
+        "5.3.0"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/noto-sans-bengali",
+      "description": "Self-host the Noto Sans Bengali font in a neatly bundled NPM package."
+    },
+    {
+      "name": "@fontsource/noto-sans-devanagari",
+      "versions": [
+        "5.3.0"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/noto-sans-devanagari",
+      "description": "Self-host the Noto Sans Devanagari font in a neatly bundled NPM package."
+    },
+    {
+      "name": "@fontsource/noto-sans-tamil",
+      "versions": [
+        "5.3.0"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/noto-sans-tamil",
+      "description": "Self-host the Noto Sans Tamil font in a neatly bundled NPM package."
+    },
+    {
+      "name": "@fontsource/noto-sans-telugu",
+      "versions": [
+        "5.3.0"
+      ],
+      "license": "OFL-1.1",
+      "author": "Google Inc.",
+      "homepage": "https://fontsource.org/fonts/noto-sans-telugu",
+      "description": "Self-host the Noto Sans Telugu font in a neatly bundled NPM package."
+    },
+    {
+      "name": "@fontsource/noto-serif-devanagari",
+      "versions": [
+        "5.3.0"
+      ],
+      "license": "OFL-1.1",
+      "homepage": "https://fontsource.org/fonts/noto-serif-devanagari",
+      "description": "Self-host the Noto Serif Devanagari font in a neatly bundled NPM package."
+    }
+  ],
+  "ISC": [
+    {
+      "name": "anymatch",
+      "versions": [
+        "3.1.3"
+      ],
+      "license": "ISC",
+      "author": "Elan Shanker",
+      "homepage": "https://github.com/micromatch/anymatch",
+      "description": "Matches strings against configurable strings, globs, regular expressions, and/or functions"
+    },
+    {
+      "name": "d3",
+      "versions": [
+        "7.9.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org",
+      "description": "Data-Driven Documents"
+    },
+    {
+      "name": "d3-array",
+      "versions": [
+        "3.2.4"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-array/",
+      "description": "Array manipulation, ordering, searching, summarizing, etc."
+    },
+    {
+      "name": "d3-axis",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-axis/",
+      "description": "Displays automatic reference lines for scales."
+    },
+    {
+      "name": "d3-brush",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-brush/",
+      "description": "Select a one- or two-dimensional region using the mouse or touch."
+    },
+    {
+      "name": "d3-chord",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-chord/",
+      "description": "Visualize relationships or network flow with an aesthetically-pleasing circular layout."
+    },
+    {
+      "name": "d3-color",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-color/",
+      "description": "Color spaces! RGB, HSL, Cubehelix, Lab and HCL (Lch)."
+    },
+    {
+      "name": "d3-contour",
+      "versions": [
+        "4.0.2"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-contour/",
+      "description": "Compute contour polygons using marching squares."
+    },
+    {
+      "name": "d3-delaunay",
+      "versions": [
+        "6.0.4"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://github.com/d3/d3-delaunay",
+      "description": "Compute the Voronoi diagram of a set of two-dimensional points."
+    },
+    {
+      "name": "d3-dispatch",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-dispatch/",
+      "description": "Register named callbacks and call them with arguments."
+    },
+    {
+      "name": "d3-drag",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-drag/",
+      "description": "Drag and drop SVG, HTML or Canvas using mouse or touch input."
+    },
+    {
+      "name": "d3-dsv",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-dsv/",
+      "description": "A parser and formatter for delimiter-separated values, such as CSV and TSV"
+    },
+    {
+      "name": "d3-fetch",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-fetch/",
+      "description": "Convenient parsing for Fetch."
+    },
+    {
+      "name": "d3-force",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-force/",
+      "description": "Force-directed graph layout using velocity Verlet integration."
+    },
+    {
+      "name": "d3-format",
+      "versions": [
+        "3.1.2"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-format/",
+      "description": "Format numbers for human consumption."
+    },
+    {
+      "name": "d3-geo",
+      "versions": [
+        "3.1.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-geo/",
+      "description": "Shapes and calculators for spherical coordinates."
+    },
+    {
+      "name": "d3-hierarchy",
+      "versions": [
+        "3.1.2"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-hierarchy/",
+      "description": "Layout algorithms for visualizing hierarchical data."
+    },
+    {
+      "name": "d3-interpolate",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-interpolate/",
+      "description": "Interpolate numbers, colors, strings, arrays, objects, whatever!"
+    },
+    {
+      "name": "d3-path",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-path/",
+      "description": "Serialize Canvas path commands to SVG."
+    },
+    {
+      "name": "d3-polygon",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-polygon/",
+      "description": "Operations for two-dimensional polygons."
+    },
+    {
+      "name": "d3-quadtree",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-quadtree/",
+      "description": "Two-dimensional recursive spatial subdivision."
+    },
+    {
+      "name": "d3-random",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-random/",
+      "description": "Generate random numbers from various distributions."
+    },
+    {
+      "name": "d3-scale",
+      "versions": [
+        "4.0.2"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-scale/",
+      "description": "Encodings that map abstract data to visual representation."
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-scale-chromatic/",
+      "description": "Sequential, diverging and categorical color schemes."
+    },
+    {
+      "name": "d3-selection",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-selection/",
+      "description": "Data-driven DOM manipulation: select elements and join them to data."
+    },
+    {
+      "name": "d3-shape",
+      "versions": [
+        "3.2.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-shape/",
+      "description": "Graphical primitives for visualization, such as lines and areas."
+    },
+    {
+      "name": "d3-time",
+      "versions": [
+        "3.1.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-time/",
+      "description": "A calculator for humanity’s peculiar conventions of time."
+    },
+    {
+      "name": "d3-time-format",
+      "versions": [
+        "4.1.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-time-format/",
+      "description": "A JavaScript time formatter and parser inspired by strftime and strptime."
+    },
+    {
+      "name": "d3-timer",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-timer/",
+      "description": "An efficient queue capable of managing thousands of concurrent animations."
+    },
+    {
+      "name": "d3-transition",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-transition/",
+      "description": "Animated transitions for D3 selections."
+    },
+    {
+      "name": "d3-zoom",
+      "versions": [
+        "3.0.0"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-zoom/",
+      "description": "Pan and zoom SVG, HTML or Canvas using mouse or touch input."
+    },
+    {
+      "name": "delaunator",
+      "versions": [
+        "5.1.0"
+      ],
+      "license": "ISC",
+      "author": "Vladimir Agafonkin",
+      "homepage": "https://github.com/mapbox/delaunator#readme",
+      "description": "An incredibly fast JavaScript library for Delaunay triangulation of 2D points"
+    },
+    {
+      "name": "flatted",
+      "versions": [
+        "3.4.4"
+      ],
+      "license": "ISC",
+      "author": "Andrea Giammarchi",
+      "homepage": "https://github.com/WebReflection/flatted#readme",
+      "description": "A super light and fast circular JSON parser."
+    },
+    {
+      "name": "glob-parent",
+      "versions": [
+        "5.1.2",
+        "6.0.2"
+      ],
+      "license": "ISC",
+      "author": "Gulp Team",
+      "homepage": "https://github.com/gulpjs/glob-parent#readme",
+      "description": "Extract the non-magic parent path from a glob string."
+    },
+    {
+      "name": "graceful-fs",
+      "versions": [
+        "4.2.11"
+      ],
+      "license": "ISC",
+      "homepage": "https://github.com/isaacs/node-graceful-fs#readme",
+      "description": "A drop-in replacement for fs, making various improvements."
+    },
+    {
+      "name": "inherits",
+      "versions": [
+        "2.0.4"
+      ],
+      "license": "ISC",
+      "homepage": "https://github.com/isaacs/inherits#readme",
+      "description": "Browser-friendly inheritance fully compatible with standard node.js inherits()"
+    },
+    {
+      "name": "internmap",
+      "versions": [
+        "1.0.1",
+        "2.0.3"
+      ],
+      "license": "ISC",
+      "author": "Mike Bostock",
+      "homepage": "https://github.com/mbostock/internmap/",
+      "description": "Map and Set with automatic key interning"
+    },
+    {
+      "name": "isexe",
+      "versions": [
+        "2.0.0"
+      ],
+      "license": "ISC",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/isexe#readme",
+      "description": "Minimal module to check if a file is executable."
+    },
+    {
+      "name": "lucide-react",
+      "versions": [
+        "0.468.0"
+      ],
+      "license": "ISC",
+      "author": "Eric Fennis",
+      "homepage": "https://lucide.dev",
+      "description": "A Lucide icon library package for React applications"
+    },
+    {
+      "name": "minimatch",
+      "versions": [
+        "3.1.5"
+      ],
+      "license": "ISC",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/minimatch#readme",
+      "description": "a glob matcher in javascript"
+    },
+    {
+      "name": "picocolors",
+      "versions": [
+        "1.1.1"
+      ],
+      "license": "ISC",
+      "author": "Alexey Raspopov",
+      "homepage": "https://github.com/alexeyraspopov/picocolors#readme",
+      "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors"
+    },
+    {
+      "name": "semver",
+      "versions": [
+        "7.8.5"
+      ],
+      "license": "ISC",
+      "author": "GitHub Inc.",
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "description": "The semantic version parser used by npm."
+    },
+    {
+      "name": "which",
+      "versions": [
+        "2.0.2"
+      ],
+      "license": "ISC",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/node-which#readme",
+      "description": "Like which(1) unix command. Find the first instance of an executable in the PATH."
+    }
+  ],
+  "Python-2.0": [
+    {
+      "name": "argparse",
+      "versions": [
+        "2.0.1"
+      ],
+      "license": "Python-2.0",
+      "homepage": "https://github.com/nodeca/argparse#readme",
+      "description": "CLI arguments parser. Native port of python's argparse."
+    }
+  ],
+  "BSD-3-Clause": [
+    {
+      "name": "d3-array",
+      "versions": [
+        "2.12.1"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-array/",
+      "description": "Array manipulation, ordering, searching, summarizing, etc."
+    },
+    {
+      "name": "d3-ease",
+      "versions": [
+        "3.0.1"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-ease/",
+      "description": "Easing functions for smooth animation."
+    },
+    {
+      "name": "d3-path",
+      "versions": [
+        "1.0.9"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-path/",
+      "description": "Serialize Canvas path commands to SVG."
+    },
+    {
+      "name": "d3-sankey",
+      "versions": [
+        "0.12.3"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Mike Bostock",
+      "homepage": "https://github.com/d3/d3-sankey",
+      "description": "Visualize flow between nodes in a directed acyclic network."
+    },
+    {
+      "name": "d3-shape",
+      "versions": [
+        "1.3.7"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Mike Bostock",
+      "homepage": "https://d3js.org/d3-shape/",
+      "description": "Graphical primitives for visualization, such as lines and areas."
+    },
+    {
+      "name": "esquery",
+      "versions": [
+        "1.7.0"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Joel Feenstra",
+      "homepage": "https://github.com/estools/esquery/",
+      "description": "A query library for ECMAScript AST using a CSS selector like query language."
+    },
+    {
+      "name": "rw",
+      "versions": [
+        "1.3.3"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Mike Bostock",
+      "homepage": "https://github.com/mbostock/rw",
+      "description": "Now stdin and stdout are files."
+    },
+    {
+      "name": "source-map-js",
+      "versions": [
+        "1.2.2"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Valentin 7rulnik Semirulnik",
+      "homepage": "https://github.com/7rulnik/source-map-js",
+      "description": "Generates and consumes source maps"
+    }
+  ],
+  "(MPL-2.0 OR Apache-2.0)": [
+    {
+      "name": "dompurify",
+      "versions": [
+        "3.4.17"
+      ],
+      "license": "(MPL-2.0 OR Apache-2.0)",
+      "author": "Dr.-Ing. Mario Heiderich, Cure53",
+      "homepage": "https://github.com/cure53/DOMPurify",
+      "description": "DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. It runs as JavaScript and works in all modern browsers, as well as in Node.js (via jsdom). DOMPurify is written by security people who have vast background in web attacks and XSS. Fear not."
+    }
+  ],
+  "BSD-2-Clause": [
+    {
+      "name": "eslint-scope",
+      "versions": [
+        "8.4.0"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-scope/README.md",
+      "description": "ECMAScript scope analyzer for ESLint"
+    },
+    {
+      "name": "espree",
+      "versions": [
+        "10.4.0"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Nicholas C. Zakas",
+      "homepage": "https://github.com/eslint/js/blob/main/packages/espree/README.md",
+      "description": "An Esprima-compatible JavaScript parser built on Acorn"
+    },
+    {
+      "name": "esrecurse",
+      "versions": [
+        "4.3.0"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/estools/esrecurse",
+      "description": "ECMAScript AST recursive visitor"
+    },
+    {
+      "name": "estraverse",
+      "versions": [
+        "5.3.0"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/estools/estraverse",
+      "description": "ECMAScript JS AST traversal functions"
+    },
+    {
+      "name": "esutils",
+      "versions": [
+        "2.0.3"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/estools/esutils",
+      "description": "utility box for ECMAScript language tools"
+    },
+    {
+      "name": "uri-js",
+      "versions": [
+        "4.4.1"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Gary Court",
+      "homepage": "https://github.com/garycourt/uri-js",
+      "description": "An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript."
+    }
+  ],
+  "CC0-1.0": [
+    {
+      "name": "fractional-indexing",
+      "versions": [
+        "3.2.0"
+      ],
+      "license": "CC0-1.0",
+      "author": "arv@rocicorp.dev",
+      "homepage": "https://github.com/rocicorp/fractional-indexing#readme",
+      "description": "Provides functions for generating ordering strings"
+    }
+  ],
+  "Unknown": [
+    {
+      "name": "khroma",
+      "versions": [
+        "2.1.0"
+      ],
+      "license": "Unknown",
+      "homepage": "https://github.com/fabiospampinato/khroma#readme",
+      "description": "A collection of functions for manipulating CSS colors, inspired by SASS."
+    }
+  ],
+  "BlueOak-1.0.0": [
+    {
+      "name": "minimatch",
+      "versions": [
+        "10.2.6"
+      ],
+      "license": "BlueOak-1.0.0",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/minimatch#readme",
+      "description": "a glob matcher in javascript"
+    }
+  ],
+  "(MIT AND Zlib)": [
+    {
+      "name": "pako",
+      "versions": [
+        "2.0.3"
+      ],
+      "license": "(MIT AND Zlib)",
+      "homepage": "https://github.com/nodeca/pako#readme",
+      "description": "zlib port to javascript - fast, modularized, with browser support"
+    }
+  ],
+  "Unlicense": [
+    {
+      "name": "robust-predicates",
+      "versions": [
+        "3.0.3"
+      ],
+      "license": "Unlicense",
+      "author": "Vladimir Agafonkin",
+      "homepage": "https://github.com/mourner/robust-predicates#readme",
+      "description": "Fast robust predicates for computational geometry"
+    }
+  ],
+  "0BSD": [
+    {
+      "name": "tslib",
+      "versions": [
+        "2.8.1"
+      ],
+      "license": "0BSD",
+      "author": "Microsoft Corp.",
+      "homepage": "https://www.typescriptlang.org/",
+      "description": "Runtime library for TypeScript helper functions"
+    }
+  ]
+}
