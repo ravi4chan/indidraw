@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement or new capability
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation or need, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Accessibility, offline and language considerations
+      description: How should this work with a keyboard or screen reader, offline, and in Indian languages?
