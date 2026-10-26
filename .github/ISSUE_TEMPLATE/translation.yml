@@ -1,0 +1,33 @@
+name: Translation improvement
+description: Suggest better wording for Hindi, Telugu, Bengali, Tamil or Marathi
+labels: [translation]
+body:
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options: [Hindi, Telugu, Bengali, Tamil, Marathi]
+    validations:
+      required: true
+  - type: input
+    id: english
+    attributes:
+      label: English text
+      placeholder: e.g. Download backup
+    validations:
+      required: true
+  - type: input
+    id: current
+    attributes:
+      label: Current translation
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested translation
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this better?
+      description: Familiarity, correctness, consistency with common software, etc.
