@@ -1,6 +1,13 @@
 import type { Transliterator } from "./hindi";
+import type { PhoneticLanguage } from "./indic";
 
-export type TypingMode = "english" | "hi-phonetic" | "hi-native";
+/**
+ * "english" leaves letters alone; "<lang>-phonetic" turns English letters
+ * into that script as you type; "<lang>-native" is for a device keyboard
+ * that already types the script (IndiDraw then never rewrites input).
+ */
+export type TypingMode =
+  "english" | `${PhoneticLanguage}-phonetic` | `${PhoneticLanguage}-native`;
 export interface PendingWord {
   raw: string;
   start: number;
@@ -26,8 +33,8 @@ interface Edit {
 // document for Latin words, and never rewrites pasted/composed/native input.
 export function attachPhoneticInput(
   textarea: HTMLTextAreaElement,
-  engine: Transliterator,
-  getMode: () => TypingMode,
+  /** The active phonetic engine, or null when typing is left alone. */
+  getEngine: () => Transliterator | null,
   preview: (value: Preview | null) => void,
 ) {
   let word: PendingWord | null = null;
@@ -52,7 +59,7 @@ export function attachPhoneticInput(
       word
         ? {
             raw: word.raw,
-            candidates: engine.candidates(word.raw),
+            candidates: getEngine()?.candidates(word.raw) ?? [word.raw],
           }
         : null,
     );
@@ -111,7 +118,8 @@ export function attachPhoneticInput(
     }
     before = snapshot();
     if (composing || event.isComposing) return;
-    if (getMode() !== "hi-phonetic") {
+    const engine = getEngine();
+    if (!engine) {
       reset();
       return;
     }
@@ -170,8 +178,9 @@ export function attachPhoneticInput(
     }
     // Number keys pick a spelling while a phonetic word is pending, like
     // common Indian-language input tools. Space keeps the first choice.
+    const engine = getEngine();
     if (
-      getMode() === "hi-phonetic" &&
+      engine &&
       usableWord() &&
       !modifier &&
       !event.altKey &&

@@ -19,6 +19,7 @@ for (const [script, subset] of [
   ["Telugu", "telugu"],
   ["Bengali", "bengali"],
   ["Tamil", "tamil"],
+  ["Malayalam", "malayalam"],
 ]) {
   const base = `node_modules/@fontsource/noto-sans-${subset}`;
   await cp(
@@ -34,19 +35,21 @@ for (const [script, subset] of [
   ["Telugu", "telugu"],
   ["Bengali", "bengali"],
   ["Tamil", "tamil"],
+  ["Malayalam", "malayalam"],
 ])
   await cp(
     `node_modules/@fontsource/noto-sans-${subset}/files/noto-sans-${subset}-${subset}-600-normal.woff2`,
     `public/fonts/Noto${script}-600.woff2`,
   );
 
-// Five selectable language fonts, including a distinct serif face for Marathi.
+// Six selectable language fonts, including a distinct serif face for Marathi.
 for (const [language, packageName, subset] of [
   ["Hindi", "noto-sans-devanagari", "devanagari"],
   ["Telugu", "noto-sans-telugu", "telugu"],
   ["Bengali", "noto-sans-bengali", "bengali"],
   ["Tamil", "noto-sans-tamil", "tamil"],
   ["Marathi", "noto-serif-devanagari", "devanagari"],
+  ["Malayalam", "noto-sans-malayalam", "malayalam"],
 ]) {
   const base = `node_modules/@fontsource/${packageName}`;
   for (const script of [subset, "latin"])

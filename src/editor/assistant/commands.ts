@@ -60,7 +60,9 @@ export function validateBatch(value: unknown): Batch {
     !value.operations.length ||
     value.operations.length > 60
   )
-    throw new AssistantError("Use a version 1 command batch with 1–60 operations.");
+    throw new AssistantError(
+      "Use a version 1 command batch with 1–60 operations.",
+    );
   for (const op of value.operations) {
     if (!record(op) || !validId(op.id))
       throw new AssistantError("Invalid operation identifier.");
@@ -77,7 +79,9 @@ export function validateBatch(value: unknown): Batch {
         throw new AssistantError("Use a label of up to 120 characters.");
     } else if (op.type === "connect_nodes") {
       if (!validId(op.from) || !validId(op.to) || op.from === op.to)
-        throw new AssistantError("Connect two different nodes using valid identifiers.");
+        throw new AssistantError(
+          "Connect two different nodes using valid identifiers.",
+        );
     } else throw new AssistantError("This diagram operation is not supported.");
   }
   // Return only recognised fields: no arbitrary model properties reach the canvas.
@@ -191,10 +195,10 @@ export function planCommands(
     const key = `${from.id}\n${to.id}`;
     if (linked.has(key)) {
       if (strict)
-        throw new AssistantError(
-          "“{from}” is already connected to “{to}”.",
-          { from: from.label, to: to.label },
-        );
+        throw new AssistantError("“{from}” is already connected to “{to}”.", {
+          from: from.label,
+          to: to.label,
+        });
       return; // A flow that repeats an existing arrow just continues from it.
     }
     linked.add(key);
@@ -207,7 +211,12 @@ export function planCommands(
   };
   const lines = text
     .split(/\r?\n/)
-    .map((line) => line.trim().replace(/[.।]+$/, "").trim())
+    .map((line) =>
+      line
+        .trim()
+        .replace(/[.।]+$/, "")
+        .trim(),
+    )
     .filter(Boolean);
   for (const line of lines) {
     const rename = /^rename\s+(.+)$/i.exec(line);
@@ -221,7 +230,9 @@ export function planCommands(
       const label = clean(parts[1]);
       if (!validLabel(label))
         throw new AssistantError("Use a label of up to 120 characters.");
-      if (nodes.some((other) => other.id !== node.id && same(other.label, label)))
+      if (
+        nodes.some((other) => other.id !== node.id && same(other.label, label))
+      )
         throw new AssistantError("A shape called “{name}” already exists.", {
           name: label,
         });
@@ -248,7 +259,9 @@ export function planCommands(
     } else throw grammarError();
   }
   if (!operations.length)
-    throw new AssistantError("Nothing to add: those shapes and arrows already exist.");
+    throw new AssistantError(
+      "Nothing to add: those shapes and arrows already exist.",
+    );
   return validateBatch({ version: 1, id: makeId(), operations });
 }
 function grammarError() {

@@ -54,7 +54,12 @@ export function assistantConnections(
     element.endBinding &&
     nodes.has(element.startBinding.elementId) &&
     nodes.has(element.endBinding.elementId)
-      ? [[element.startBinding.elementId, element.endBinding.elementId] as const]
+      ? [
+          [
+            element.startBinding.elementId,
+            element.endBinding.elementId,
+          ] as const,
+        ]
       : [],
   );
 }
@@ -328,6 +333,8 @@ export function applyBatch(
     }
   }
   if (elements.length > 10000)
-    throw new AssistantError("This drawing has reached its 10,000-element limit.");
+    throw new AssistantError(
+      "This drawing has reached its 10,000-element limit.",
+    );
   return elements;
 }

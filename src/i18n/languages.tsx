@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { terminology } from "./editorTerms";
 import { siteRows } from "./siteStrings";
+import { malayalam } from "./malayalam";
+import { moreRows } from "./moreStrings";
 export const languageOptions = [
   { code: "en", label: "English", editor: "en" },
   { code: "hi", label: "हिन्दी · Hindi", editor: "hi-IN" },
@@ -8,6 +10,7 @@ export const languageOptions = [
   { code: "bn", label: "বাংলা · Bengali", editor: "bn-BD" },
   { code: "ta", label: "தமிழ் · Tamil", editor: "ta-IN" },
   { code: "mr", label: "मराठी · Marathi", editor: "mr-IN" },
+  { code: "ml", label: "മലയാളം · Malayalam", editor: "en" },
 ] as const;
 export type LanguageCode = (typeof languageOptions)[number]["code"];
 const storageKey = "indidraw-language";
@@ -44,9 +47,12 @@ export function LanguageSelector({
     <label className="language-selector">
       <span>{ui("Language", value)}</span>
       <select
-        aria-label="Language"
+        aria-label={ui("Language", value)}
         disabled={disabled}
-        title="Changing language saves and reopens the board; session undo history restarts."
+        title={ui(
+          "Changing language saves and reopens the board; session undo history restarts.",
+          value,
+        )}
         value={value}
         onChange={(e) => onChange(e.target.value as LanguageCode)}
       >
@@ -63,26 +69,7 @@ export function LanguageSelector({
 // intentionally fall back to English. Drawing content and titles are never translated.
 const rows = [
   ["Language", "भाषा", "భాష", "ভাষা", "மொழி", "भाषा"],
-  ["New", "नया", "కొత్తది", "নতুন", "புதியது", "नवीन"],
-  ["Open", "खोलें", "తెరవండి", "খুলুন", "திற", "उघडा"],
   ["Templates", "टेम्पलेट", "నమూనాలు", "টেমপ্লেট", "வார்ப்புருக்கள்", "साचे"],
-  ["Import", "इंपोर्ट", "ఇంపోర్ట్", "ইমপোর্ট", "இம்போர்ட்", "इंपोर्ट"],
-  [
-    "Export ↓",
-    "एक्सपोर्ट ↓",
-    "ఎక్స్‌పోర్ట్ ↓",
-    "এক্সপোর্ট ↓",
-    "எக்ஸ்போர்ட் ↓",
-    "एक्सपोर्ट ↓",
-  ],
-  [
-    "Editable .excalidraw",
-    "संपादन योग्य .excalidraw",
-    "సవరించగల .excalidraw",
-    "সম্পাদনাযোগ্য .excalidraw",
-    "திருத்தக்கூடிய .excalidraw",
-    "संपादनयोग्य .excalidraw",
-  ],
   [
     "PNG image",
     "PNG चित्र",
@@ -364,12 +351,33 @@ const rows = [
     "फक्त या ब्राउझरमध्ये जतन होते. बॅकअपसाठी मूळ फाइल एक्सपोर्ट करा.",
   ],
 ] as const;
-export const translations = Object.fromEntries(
-  [...rows, ...siteRows].map((row) => [
+// Older rows have six columns; their Malayalam lives in malayalam.ts. Newer
+// rows list all seven languages in languageOptions order.
+export const translations = Object.fromEntries([
+  ...[...rows, ...siteRows].map((row) => [
+    row[0],
+    {
+      ...Object.fromEntries(
+        row.map((text, index) => [languageOptions[index].code, text]),
+      ),
+      ml: malayalam[row[0]],
+    },
+  ]),
+  ...moreRows.map((row) => [
     row[0],
     Object.fromEntries(languageOptions.map((l, index) => [l.code, row[index]])),
   ]),
-) as Record<string, Record<LanguageCode, string>>;
+]) as Record<string, Record<LanguageCode, string>>;
+/** ui() for a message with {placeholders}; values are inserted untranslated. */
+export function uiFill(
+  english: string,
+  params: Record<string, string>,
+  language: LanguageCode,
+): string {
+  return ui(english, language).replace(/\{(\w+)\}/g, (match, key: string) =>
+    key in params ? params[key] : match,
+  );
+}
 export function ui(english: string, language: LanguageCode): string {
   if (english === "Export ↓") return `${terminology.Export[language]} ↓`;
   return (

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Keyboard } from "lucide-react";
-import { ui, type LanguageCode } from "../../i18n/languages";
-import { hindiTransliterator } from "./hindi";
+import { languageOptions, ui, type LanguageCode } from "../../i18n/languages";
+import { phoneticLanguages } from "./indic";
 import { attachPhoneticInput, type Preview, type TypingMode } from "./input";
+import { engineFor } from "./typingMode";
 
-export function defaultTypingMode(language: LanguageCode): TypingMode {
-  return language === "hi" ? "hi-phonetic" : "english";
-}
+const languageName = (code: string) =>
+  languageOptions.find((option) => option.code === code)?.label ?? code;
 
 /** Compact keyboard control that sits beside the language selector. */
 export function TypingModeSelect({
@@ -25,22 +25,32 @@ export function TypingModeSelect({
     >
       <Keyboard size={15} aria-hidden="true" />
       <select
-        aria-label="Typing mode"
+        aria-label={ui("Typing mode", language)}
         value={value}
         onChange={(event) => onChange(event.target.value as TypingMode)}
       >
         <option value="english">{ui("English letters", language)}</option>
-        <option value="hi-phonetic">{ui("Hindi phonetic", language)}</option>
-        <option value="hi-native">
-          {ui("Device Hindi keyboard", language)}
-        </option>
+        <optgroup label={ui("Phonetic: type English letters", language)}>
+          {phoneticLanguages.map((code) => (
+            <option key={code} value={`${code}-phonetic`}>
+              {languageName(code)}
+            </option>
+          ))}
+        </optgroup>
+        <optgroup label={ui("Device keyboard: leave text as typed", language)}>
+          {phoneticLanguages.map((code) => (
+            <option key={code} value={`${code}-native`}>
+              {languageName(code)}
+            </option>
+          ))}
+        </optgroup>
       </select>
     </label>
   );
 }
 
 /** Spelling choices float under the text being edited, not in a toolbar. */
-export default function HindiTyping({
+export default function PhoneticTyping({
   mode,
   language,
 }: {
@@ -80,12 +90,7 @@ export default function HindiTyping({
       controller.current?.destroy();
       textarea.current = next;
       controller.current = next
-        ? attachPhoneticInput(
-            next,
-            hindiTransliterator,
-            () => modeRef.current,
-            show,
-          )
+        ? attachPhoneticInput(next, () => engineFor(modeRef.current), show)
         : null;
     };
     // Only the drawing surface hosts the text editor; avoid page-wide work.
@@ -99,16 +104,16 @@ export default function HindiTyping({
       controller.current = null;
     };
   }, []);
-  if (!preview || !anchor || mode !== "hi-phonetic") return null;
+  if (!preview || !anchor || !engineFor(mode)) return null;
   return (
     <div
       className="phonetic-candidates"
       role="group"
-      aria-label="Hindi spelling choices"
+      aria-label={ui("Spelling choices", language)}
       style={{ left: anchor.left, top: anchor.top }}
     >
       <div className="phonetic-choices">
-        <span className="phonetic-raw" aria-live="polite">
+        <span className="phonetic-raw" lang="en" aria-live="polite">
           {preview.raw}
         </span>
         {preview.candidates.slice(0, 9).map((candidate, index) => (

@@ -58,10 +58,12 @@ export default defineConfig({
           );
           const match = code.match(declaration);
           if (!match) throw new Error("Editor translator signature changed.");
-          const key = match[1].split(",")[0].trim();
+          const [key, replacement] = match[1]
+            .split(",")
+            .map((part) => part.split("=")[0].trim());
           code = code.replace(
             declaration,
-            `${match[0]}const __indidrawTerm=__indidrawEditorTerm(${key});if(__indidrawTerm!==undefined)return __indidrawTerm;`,
+            `${match[0]}const __indidrawTerm=__indidrawEditorTerm(${key}${replacement ? `,${replacement}` : ""});if(__indidrawTerm!==undefined)return __indidrawTerm;`,
           );
           code =
             `import {editorTerm as __indidrawEditorTerm} from ${JSON.stringify(new URL("./src/i18n/editorTerms.ts", import.meta.url).pathname)};\n` +
