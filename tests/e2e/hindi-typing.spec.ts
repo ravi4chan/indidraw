@@ -7,9 +7,7 @@ async function start(page: Page) {
   await page.goto("/draw");
   const welcome = page.getByRole("button", { name: "Let’s draw" });
   if (await welcome.isVisible()) await welcome.click();
-  await page
-    .getByRole("combobox", { name: "Typing mode" })
-    .selectOption("hi-phonetic");
+  await page.locator(".typing-mode select").selectOption("hi-phonetic");
   await page
     .getByRole("radio", { name: "Text", exact: true })
     .check({ force: true });
@@ -122,9 +120,7 @@ test("Hindi live typing, editing, native input, selection, history and paste", a
   const preserved = JSON.parse((await download(page, "excalidraw")).toString())
     .elements[0].text;
   for (const mode of ["english", "hi-native", "hi-phonetic"]) {
-    await page
-      .getByRole("combobox", { name: "Typing mode" })
-      .selectOption(mode);
+    await page.locator(".typing-mode select").selectOption(mode);
     expect(
       JSON.parse((await download(page, "excalidraw")).toString()).elements[0]
         .text,
@@ -146,12 +142,8 @@ test("Hindi defaults automatically; Unicode saves, reopens and exports offline",
   );
   const native = await download(page, "excalidraw");
   expect(JSON.parse(native.toString()).elements[0].text).toBe(expected);
-  await page
-    .getByRole("combobox", { name: "Language", exact: true })
-    .selectOption("hi");
-  await expect(page.getByRole("combobox", { name: "Typing mode" })).toHaveValue(
-    "hi-phonetic",
-  );
+  await page.locator(".language-selector select").selectOption("hi");
+  await expect(page.locator(".typing-mode select")).toHaveValue("hi-phonetic");
   expect(
     JSON.parse((await download(page, "excalidraw")).toString()).elements[0]
       .text,
@@ -162,9 +154,7 @@ test("Hindi defaults automatically; Unicode saves, reopens and exports offline",
   await page.waitForFunction(() => !!navigator.serviceWorker.controller);
   await context.setOffline(true);
   await page.reload();
-  await expect(page.getByRole("combobox", { name: "Typing mode" })).toHaveValue(
-    "hi-phonetic",
-  );
+  await expect(page.locator(".typing-mode select")).toHaveValue("hi-phonetic");
   const svg = (await download(page, "svg")).toString();
   expect(svg).toContain(expected);
   expect(svg).toContain("data:font/woff2;base64,");
@@ -190,9 +180,7 @@ test("English and native keyboard modes leave typed text alone", async ({
   // Controls live above the canvas; Escape finishes an edit before switching.
   await page.keyboard.press("Escape");
   for (const mode of ["english", "hi-native"]) {
-    await page
-      .getByRole("combobox", { name: "Typing mode" })
-      .selectOption(mode);
+    await page.locator(".typing-mode select").selectOption(mode);
     await page
       .getByRole("radio", { name: "Text", exact: true })
       .check({ force: true });
@@ -256,9 +244,7 @@ test("choosing Hindi never converts existing English text", async ({
 }) => {
   await start(page);
   await page.keyboard.press("Escape");
-  await page
-    .getByRole("combobox", { name: "Typing mode" })
-    .selectOption("english");
+  await page.locator(".typing-mode select").selectOption("english");
   await page
     .getByRole("radio", { name: "Text", exact: true })
     .check({ force: true });
@@ -267,12 +253,8 @@ test("choosing Hindi never converts existing English text", async ({
   await page.keyboard.type("namaste bharat");
   await expect(page.locator(textarea)).toHaveValue("namaste bharat");
   await page.keyboard.press("Escape");
-  await page
-    .getByRole("combobox", { name: "Language", exact: true })
-    .selectOption("hi");
-  await expect(page.getByRole("combobox", { name: "Typing mode" })).toHaveValue(
-    "hi-phonetic",
-  );
+  await page.locator(".language-selector select").selectOption("hi");
+  await expect(page.locator(".typing-mode select")).toHaveValue("hi-phonetic");
   const scene = JSON.parse((await download(page, "excalidraw")).toString());
   expect(scene.elements[0].text).toBe("namaste bharat");
 });

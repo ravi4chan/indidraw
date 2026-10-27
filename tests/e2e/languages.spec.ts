@@ -9,6 +9,7 @@ const options = [
   ["bn", "ফাইল"],
   ["ta", "கோப்பு"],
   ["mr", "फाइल"],
+  ["ml", "ഫയൽ"],
 ] as const;
 test("language choices preserve the document, persist and work offline", async ({
   page,
@@ -20,12 +21,9 @@ test("language choices preserve the document, persist and work offline", async (
   });
   await page.setViewportSize({ width: 1280, height: 960 });
   await page.goto("/draw?template=flowchart");
-  const selector = page.getByRole("combobox", {
-    name: "Language",
-    exact: true,
-  });
+  const selector = page.locator(".language-selector select");
   await expect(selector).toHaveValue("en");
-  await expect(selector.locator("option")).toHaveCount(6);
+  await expect(selector.locator("option")).toHaveCount(7);
   await expect(page.locator(".excalidraw")).toBeVisible();
   await expect(page.locator(".save-status")).toContainText(
     "Saved on this device",
@@ -55,10 +53,11 @@ test("language choices preserve the document, persist and work offline", async (
     const rectangleLabels = {
       en: "Rectangle",
       hi: "आयत",
-      te: "Rectangle",
+      te: "దీర్ఘచతురస్రం",
       bn: "আয়তক্ষেত্র",
       ta: "செவ்வகம்",
       mr: "आयत",
+      ml: "ദീർഘചതുരം",
     };
     await expect(
       page.getByRole("radio", { name: rectangleLabels[locale], exact: true }),

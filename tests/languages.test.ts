@@ -8,7 +8,7 @@ import {
 describe("language selection", () => {
   it("uses English by default without browser storage", () =>
     expect(initialLanguage()).toBe("en"));
-  it("includes exactly the six requested options", () =>
+  it("includes exactly the seven requested options", () =>
     expect(languageOptions.map((l) => l.code)).toEqual([
       "en",
       "hi",
@@ -16,8 +16,9 @@ describe("language selection", () => {
       "bn",
       "ta",
       "mr",
+      "ml",
     ]));
-  it("has every custom translation for all six options", () => {
+  it("has every custom translation for all seven options", () => {
     for (const row of Object.values(translations))
       for (const language of languageOptions)
         expect(row[language.code].trim().length).toBeGreaterThan(0);

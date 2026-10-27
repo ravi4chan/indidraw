@@ -21,7 +21,9 @@ async function command(page: Page, input: string) {
   await page.getByRole("button", { name: "Preview changes" }).click();
   await page.getByRole("button", { name: "Apply to canvas" }).click();
   await expect(
-    page.getByRole("status").filter({ hasText: "Added to your drawing" }),
+    page
+      .getByRole("status")
+      .filter({ hasText: /(Added to|Updated) your drawing/ }),
   ).toBeVisible();
 }
 test("native editable graph, preview, bindings, atomic undo, rename, persistence and exports", async ({
@@ -185,7 +187,5 @@ test("unsupported instructions do not partially change drawings; assistant works
   await expect(
     page.getByRole("complementary", { name: "Diagram assistant" }),
   ).toHaveCount(0);
-  await expect(
-    page.getByRole("combobox", { name: "Typing mode" }),
-  ).toBeVisible();
+  await expect(page.locator(".typing-mode select")).toBeVisible();
 });

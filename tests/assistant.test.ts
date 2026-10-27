@@ -134,9 +134,11 @@ describe("building a diagram over several instructions", () => {
     ]);
   });
   it("skips arrows that are already drawn when a flow repeats them", () => {
-    const batch = planner()("Roof → Filter → Tank", [roof, filter], [
-      ["roof", "filter"],
-    ]);
+    const batch = planner()(
+      "Roof → Filter → Tank",
+      [roof, filter],
+      [["roof", "filter"]],
+    );
     expect(batch.operations.map((op) => op.type)).toEqual([
       "add_node",
       "connect_nodes",
@@ -145,15 +147,19 @@ describe("building a diagram over several instructions", () => {
       planner()("roof → FILTER", [roof, filter], [["roof", "filter"]]),
     ).toThrow("Nothing to add");
     expect(() =>
-      planner()('connect "Roof" → "Filter"', [roof, filter], [
-        ["roof", "filter"],
-      ]),
+      planner()(
+        'connect "Roof" → "Filter"',
+        [roof, filter],
+        [["roof", "filter"]],
+      ),
     ).toThrow("already connected");
   });
   it("connects existing shapes in both directions and in a loop", () => {
-    const batch = planner()("Filter → Roof", [roof, filter], [
-      ["roof", "filter"],
-    ]);
+    const batch = planner()(
+      "Filter → Roof",
+      [roof, filter],
+      [["roof", "filter"]],
+    );
     expect(batch.operations).toEqual([
       { type: "connect_nodes", id: "test-1", from: "filter", to: "roof" },
     ]);
@@ -239,7 +245,9 @@ describe("identifiers", () => {
         configurable: true,
       });
       const id = newId();
-      expect(id).toMatch(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/);
+      expect(id).toMatch(
+        /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/,
+      );
       expect(planCommands("A → B", []).operations).toHaveLength(3);
     } finally {
       Object.defineProperty(crypto, "randomUUID", {
