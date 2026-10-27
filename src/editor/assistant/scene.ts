@@ -6,7 +6,12 @@ import type {
   ExcalidrawElement,
   ExcalidrawTextElement,
 } from "@excalidraw/excalidraw/element/types";
-import { validateBatch, type NodeReference } from "./commands";
+import {
+  AssistantError,
+  validateBatch,
+  type Connection,
+  type NodeReference,
+} from "./commands";
 import { labelFont } from "../labelFont";
 
 const key = "indidrawAssistant";
@@ -36,6 +41,22 @@ export function assistantNodes(
           label.containerId === element.id,
       )?.originalText ?? "",
   }));
+}
+/** Arrows that already join two assistant shapes, so flows don't repeat them. */
+export function assistantConnections(
+  elements: readonly ExcalidrawElement[],
+): Connection[] {
+  const nodes = new Set(elements.filter(isNode).map((element) => element.id));
+  return elements.flatMap((element) =>
+    !element.isDeleted &&
+    element.type === "arrow" &&
+    element.startBinding &&
+    element.endBinding &&
+    nodes.has(element.startBinding.elementId) &&
+    nodes.has(element.endBinding.elementId)
+      ? [[element.startBinding.elementId, element.endBinding.elementId] as const]
+      : [],
+  );
 }
 export function sceneRevision(elements: readonly ExcalidrawElement[]) {
   return JSON.stringify(
@@ -86,11 +107,11 @@ export function applyBatch(
       (element) => element.id === id && isNode(element),
     );
     if (!result)
-      throw new Error(
+      throw new AssistantError(
         "An assistant shape is missing. Preview the instruction again.",
       );
     if (result.locked || result.angle !== 0 || result.frameId)
-      throw new Error(
+      throw new AssistantError(
         "Unlock the shape and move it out of rotated or framed layouts before changing it here.",
       );
     return result;
@@ -105,7 +126,7 @@ export function applyBatch(
   for (const op of batch.operations) {
     if (op.type === "add_node") {
       if (idSet.has(op.id))
-        throw new Error("A shape identifier already exists.");
+        throw new AssistantError("A shape identifier already exists.");
       // Conservative placement checks the whole drawing, including hand-drawn work.
       const width = Math.max(
         190,
@@ -136,7 +157,7 @@ export function applyBatch(
         }
       }
       if (!available)
-        throw new Error(
+        throw new AssistantError(
           "No clear space found. Start a new drawing for this diagram.",
         );
       const created = convertToExcalidrawElements(
@@ -172,7 +193,7 @@ export function applyBatch(
           !e.isDeleted && e.type === "text" && e.containerId === target.id,
       );
       if (!label || label.locked)
-        throw new Error(
+        throw new AssistantError(
           "This shape has no editable label. Add a label on the canvas first.",
         );
       const measured = convertToExcalidrawElements(
@@ -194,7 +215,7 @@ export function applyBatch(
       const container = measured.find((e) => e.id === target.id)!;
       const text = measured.find((e) => e.type === "text");
       if (!text || text.type !== "text")
-        throw new Error("Could not measure the new label.");
+        throw new AssistantError("Could not measure the new label.");
       // Enlarging a connected container requires rerouting; reject rather than
       // silently corrupt a manually adjusted connector in this first adapter.
       if (
@@ -202,7 +223,7 @@ export function applyBatch(
           container.height !== target.height) &&
         target.boundElements?.some((e) => e.type === "arrow")
       )
-        throw new Error(
+        throw new AssistantError(
           "This label needs more space. Resize the connected shape on the canvas, then preview again.",
         );
       elements = elements.map((e) =>
@@ -228,7 +249,7 @@ export function applyBatch(
       const from = node(op.from),
         to = node(op.to);
       if (idSet.has(op.id))
-        throw new Error("A connection identifier already exists.");
+        throw new AssistantError("A connection identifier already exists.");
       if (
         elements.some(
           (e) =>
@@ -238,7 +259,7 @@ export function applyBatch(
             e.endBinding?.elementId === to.id,
         )
       )
-        throw new Error(
+        throw new AssistantError(
           "These shapes are already connected in that direction.",
         );
       const horizontal = Math.abs(to.x - from.x) >= Math.abs(to.y - from.y);
@@ -307,6 +328,6 @@ export function applyBatch(
     }
   }
   if (elements.length > 10000)
-    throw new Error("This drawing has reached its 10,000-element limit.");
+    throw new AssistantError("This drawing has reached its 10,000-element limit.");
   return elements;
 }

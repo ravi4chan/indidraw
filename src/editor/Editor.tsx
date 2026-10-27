@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { newId } from "./newId";
 import {
   Excalidraw,
   languages as editorLanguages,
@@ -253,7 +254,7 @@ export default function Editor() {
         } catch {
           /* A fresh document is still available. */
         }
-      id.current = target ?? crypto.randomUUID();
+      id.current = target ?? newId();
       try {
         const saved = target ? await getDrawing(target) : undefined;
         if (!active) return;
@@ -284,7 +285,7 @@ export default function Editor() {
             notify(
               "The requested drawing was not found. A new canvas has been opened.",
             );
-          id.current = crypto.randomUUID();
+          id.current = newId();
           setInitial({
             elements: template ? templateElements(template) : [],
             appState: { viewBackgroundColor: "#ffffff" },
@@ -419,7 +420,7 @@ export default function Editor() {
   }
   async function newDrawing(templateId?: string) {
     if (!(await flush())) return;
-    const next = crypto.randomUUID();
+    const next = newId();
     location.href = templateId
       ? `/draw?template=${templateId}`
       : `/draw?id=${next}`;
@@ -437,11 +438,11 @@ export default function Editor() {
         null,
       );
       if (!(await flush())) return;
-      const newId = crypto.randomUUID();
+      const importedId = newId();
       const name =
         file.name.replace(/\.excalidraw$/i, "").slice(0, 120) || t("title");
       await saveDrawing({
-        id: newId,
+        id: importedId,
         title: name,
         scene: serializeAsJSON(
           restored.elements,
@@ -452,7 +453,7 @@ export default function Editor() {
         revision: Date.now(),
         updatedAt: Date.now(),
       });
-      location.href = `/draw?id=${newId}`;
+      location.href = `/draw?id=${importedId}`;
     } catch (e) {
       setError(saveError(e));
     } finally {
