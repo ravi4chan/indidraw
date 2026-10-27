@@ -4,9 +4,16 @@ import type { ExcalidrawImperativeAPI } from "@excalidraw/excalidraw/types";
 import type { ExcalidrawElement } from "@excalidraw/excalidraw/element/types";
 import { ArrowRight, Check, MicOff, Sparkles, Undo2, X } from "lucide-react";
 import { ui, type LanguageCode } from "../../i18n/languages";
-import { planCommands, type Batch, type Operation } from "./commands";
+import {
+  AssistantError,
+  fill,
+  planCommands,
+  type Batch,
+  type Operation,
+} from "./commands";
 import {
   applyBatch,
+  assistantConnections,
   assistantNodes,
   revertBatch,
   sceneRevision,
@@ -29,6 +36,51 @@ const syntax = [
   'rename "Student" to "Learner"',
 ];
 
+interface Message {
+  key: string;
+  params: Readonly<Record<string, string>>;
+}
+
+/**
+ * Bring previewed shapes into view without changing the zoom when they
+ * already fit. Fitting a single new box or renamed label to the viewport
+ * used to zoom the canvas in to as much as 1000%.
+ */
+function reveal(
+  api: ExcalidrawImperativeAPI,
+  elements: readonly ExcalidrawElement[],
+) {
+  if (!elements.length) return;
+  const { width, height, scrollX, scrollY, zoom } = api.getAppState();
+  const left = Math.min(...elements.map((e) => e.x));
+  const top = Math.min(...elements.map((e) => e.y));
+  const right = Math.max(...elements.map((e) => e.x + e.width));
+  const bottom = Math.max(...elements.map((e) => e.y + e.height));
+  // Keep clear of the floating toolbar and zoom controls at the edges.
+  const margin = 72 / zoom.value;
+  const view = {
+    left: -scrollX + margin,
+    top: -scrollY + margin,
+    right: -scrollX + width / zoom.value - margin,
+    bottom: -scrollY + height / zoom.value - margin,
+  };
+  if (
+    left >= view.left &&
+    top >= view.top &&
+    right <= view.right &&
+    bottom <= view.bottom
+  )
+    return;
+  const fits =
+    right - left <= (width / zoom.value) * 0.9 &&
+    bottom - top <= (height / zoom.value) * 0.9;
+  api.scrollToContent(elements as ExcalidrawElement[], {
+    // Only zoom out, and only when the change is bigger than the screen.
+    ...(fits ? {} : { fitToViewport: true, viewportZoomFactor: 0.8 }),
+    animate: true,
+  });
+}
+
 export default function DiagramAssistant({
   api,
   language,
@@ -43,6 +95,11 @@ export default function DiagramAssistant({
   onApplied: () => void;
 }) {
   const tr = (text: string) => ui(text, language);
+  /** Translate a failure's template, then fill in labels untranslated. */
+  const failure = (e: unknown, fallback: string): Message =>
+    e instanceof AssistantError
+      ? { key: e.key, params: e.params }
+      : { key: fallback, params: {} };
   const [input, setInput] = useState("");
   const [preview, setPreview] = useState<{
     batch: Batch;
@@ -54,7 +111,7 @@ export default function DiagramAssistant({
     before: readonly ExcalidrawElement[];
     revision: string;
   } | null>(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<Message | null>(null);
   const [status, setStatus] = useState("");
   useEffect(() => () => onPreview(null), [onPreview]);
   function clearPreview() {
@@ -62,14 +119,19 @@ export default function DiagramAssistant({
     onPreview(null);
   }
   function prepare() {
-    setError("");
+    setError(null);
     setStatus("");
     setApplied(null);
     clearPreview();
     try {
       const elements = api.getSceneElementsIncludingDeleted();
       const nodes = assistantNodes(elements);
-      const batch = planCommands(input, nodes);
+      const batch = planCommands(
+        input,
+        nodes,
+        undefined,
+        assistantConnections(elements),
+      );
       // Full dry run: no partial application on error.
       const result = applyBatch(elements, batch);
       const previous = new Map(elements.map((e) => [e.id, e]));
@@ -92,16 +154,9 @@ export default function DiagramAssistant({
         original,
       });
       onPreview(ghost);
-      if (ghost.length)
-        api.scrollToContent(ghost as ExcalidrawElement[], {
-          fitToViewport: true,
-          viewportZoomFactor: 0.7,
-          animate: true,
-        });
+      reveal(api, ghost);
     } catch (e) {
-      setError(
-        e instanceof Error ? e.message : tr("Could not preview this command."),
-      );
+      setError(failure(e, "Could not preview this command."));
     }
   }
   function commit() {
@@ -109,7 +164,7 @@ export default function DiagramAssistant({
     try {
       const elements = api.getSceneElementsIncludingDeleted();
       if (sceneRevision(elements) !== preview.revision)
-        throw new Error(
+        throw new AssistantError(
           "Your canvas changed after this preview. Preview again to use the latest drawing.",
         );
       const next = applyBatch(elements, preview.batch);
@@ -123,14 +178,16 @@ export default function DiagramAssistant({
         revision: sceneRevision(api.getSceneElementsIncludingDeleted()),
       });
       setInput("");
-      setError("");
-      setStatus("Added to your drawing.");
+      setError(null);
+      setStatus(
+        preview.batch.operations.every((op) => op.type === "rename_node")
+          ? "Updated your drawing."
+          : "Added to your drawing.",
+      );
       onApplied();
     } catch (e) {
       clearPreview();
-      setError(
-        e instanceof Error ? e.message : tr("Could not apply this command."),
-      );
+      setError(failure(e, "Could not apply this command."));
     }
   }
   function undo() {
@@ -152,7 +209,7 @@ export default function DiagramAssistant({
   const chooseExample = (value: string) => {
     setInput(value);
     clearPreview();
-    setError("");
+    setError(null);
     setStatus("");
   };
   const describe = (
@@ -169,7 +226,7 @@ export default function DiagramAssistant({
   return (
     <aside
       className="diagram-assistant"
-      aria-label="Diagram assistant"
+      aria-label={tr("Diagram assistant")}
       onKeyDown={(event) => {
         if (event.key === "Escape") {
           event.stopPropagation();
@@ -179,7 +236,7 @@ export default function DiagramAssistant({
     >
       <div className="assistant-heading">
         <div>
-          <span className="eyebrow">INDIDRAW LABS</span>
+          <span className="eyebrow">{tr("INDIDRAW LABS")}</span>
           <h2>
             <Sparkles size={18} /> {tr("Diagram assistant")}
           </h2>
@@ -230,7 +287,7 @@ export default function DiagramAssistant({
           aria-describedby="diagram-help"
           rows={5}
           maxLength={4000}
-          placeholder="Roof → Filter → Storage tank → Garden"
+          placeholder={tr("Roof → Filter → Storage tank → Garden")}
           value={input}
           onChange={(e) => chooseExample(e.target.value)}
         />
@@ -244,7 +301,7 @@ export default function DiagramAssistant({
       </form>
       {error && (
         <p className="assistant-error" role="alert">
-          {tr(error)}
+          {fill(tr(error.key), error.params)}
         </p>
       )}
       {preview && (

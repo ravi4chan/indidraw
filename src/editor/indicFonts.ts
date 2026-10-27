@@ -20,6 +20,7 @@ export const indicScripts = [
   { name: "Telugu", range: "U+0C00-0C7F", match: /[\u0c00-\u0c7f]/ },
   { name: "Bengali", range: "U+0980-09FF", match: /[\u0980-\u09ff]/ },
   { name: "Tamil", range: "U+0B80-0BFF", match: /[\u0b80-\u0bff]/ },
+  { name: "Malayalam", range: "U+0D00-0D7F", match: /[\u0d00-\u0d7f]/ },
 ];
 let loading: Promise<void> | undefined;
 export function loadIndicFonts(): Promise<void> {
@@ -53,7 +54,7 @@ export async function embedIndicFonts(svg: SVGSVGElement) {
         const response = await fetch(`/fonts/Noto${script.name}.woff2`);
         if (!response.ok)
           throw new Error(
-            `${script.name} export font is unavailable. Reconnect once to finish caching fonts.`,
+            "An Indian-language export font is unavailable. Reconnect once to finish caching fonts.",
           );
         let binary = "";
         for (const byte of new Uint8Array(await response.arrayBuffer()))

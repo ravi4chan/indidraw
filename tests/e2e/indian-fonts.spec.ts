@@ -173,9 +173,7 @@ test("reviewed terminology appears in header and text settings in all five langu
       "लेयर्स",
     ],
   ]) {
-    await page
-      .getByRole("combobox", { name: "Language", exact: true })
-      .selectOption(code);
+    await page.locator(".language-selector select").selectOption(code);
     // Document actions now live in the translated File menu.
     await page.locator(".file-menu > button").click();
     await expect(page.getByRole("menu")).toContainText(importLabel);

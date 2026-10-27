@@ -1,11 +1,14 @@
 import { useId } from "react";
 import { edgePoints, nodeSize, type Template } from "./templates/data";
+import { uiFill, ui, type LanguageCode } from "./i18n/languages";
 export default function Diagram({
   template,
   hero = false,
+  language = "en",
 }: {
   template: Template;
   hero?: boolean;
+  language?: LanguageCode;
 }) {
   const id = useId().replace(/:/g, "");
   const width =
@@ -17,7 +20,11 @@ export default function Diagram({
       className={hero ? "diagram hero-diagram" : "diagram"}
       viewBox={`-15 -15 ${width + 30} ${height + 30}`}
       role="img"
-      aria-label={`${template.name} editable template preview`}
+      aria-label={uiFill(
+        "{name}: editable template preview",
+        { name: ui(template.name, language) },
+        language,
+      )}
     >
       <defs>
         <marker

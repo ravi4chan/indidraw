@@ -10,7 +10,7 @@ IndiDraw is a static, client-only single-page application. Everything — drawin
   /draw                  │  Editor.tsx ──────────┘                                          │
                          │    ├─ <Excalidraw>  (upstream editor, unmodified)               │
                          │    ├─ FileMenu, save badge, toasts                              │
-                         │    ├─ HindiTyping ──► transliteration/input.ts ► hindi.ts       │
+                         │    ├─ PhoneticTyping ──► transliteration/input.ts ► indic.ts    │
                          │    ├─ DiagramAssistant ──► assistant/commands.ts ► scene.ts     │
                          │    └─ storage/documents.ts ──► IndexedDB "indidraw"             │
                          │                                                                  │
@@ -74,9 +74,9 @@ New versions wait until old tabs close, so an update never interrupts an editing
 
 `vite.config.ts` contains two small, version-pinned transforms of the Excalidraw bundle: one keeps Excalidraw's font fallback on the same origin (required by the Content Security Policy), the other exposes the font registry and terminology function. Both fail the build loudly if the upstream code changes, so they must be reviewed when upgrading Excalidraw.
 
-## Hindi phonetic typing (`src/editor/transliteration`)
+## Phonetic typing (`src/editor/transliteration`)
 
-`HindiTyping.tsx` watches the drawing surface for Excalidraw's text editor (`textarea[data-type="wysiwyg"]`) and attaches `input.ts` to it. The adapter intercepts newly typed English letters, replaces the current word with the first suggestion from `hindi.ts` (an everyday-spelling list on top of Sanscript's ITRANS scheme), and keeps its own undo history for those edits. Pasted, composed (IME) and native-keyboard input pass through untouched. Details: [HINDI-TYPING.md](HINDI-TYPING.md).
+`PhoneticTyping.tsx` watches the drawing surface for Excalidraw's text editor (`textarea[data-type="wysiwyg"]`) and attaches `input.ts` to it. The adapter intercepts newly typed English letters, replaces the current word with the first suggestion from the active engine — `hindi.ts` for Hindi, `indic.ts` (rules for conjuncts, vowel signs, virama and chillu/anusvara endings plus `dictionaries.ts`) for Telugu, Bengali, Tamil, Marathi and Malayalam. `typingMode.ts` ties the default keyboard to the app language and remembers overrides per language, and keeps its own undo history for those edits. Pasted, composed (IME) and native-keyboard input pass through untouched. Details: [HINDI-TYPING.md](HINDI-TYPING.md).
 
 ## Diagram assistant (`src/editor/assistant`)
 

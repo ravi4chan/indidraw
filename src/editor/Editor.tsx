@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { newId } from "./newId";
 import {
   Excalidraw,
   languages as editorLanguages,
@@ -49,6 +50,7 @@ import {
   languageOptions,
   useLanguage,
   ui,
+  uiFill,
   type LanguageCode,
 } from "../i18n/languages";
 // These locale bundles ship upstream but are omitted by its completeness filter.
@@ -62,10 +64,10 @@ import { rasterFiles } from "./rasterFiles";
 import { loadIndicFonts, embedIndicFonts } from "./indicFonts";
 import { libraryAdapter } from "../storage/library";
 import "./languageFonts";
-import HindiTyping, {
+import PhoneticTyping, {
   TypingModeSelect,
-  defaultTypingMode,
-} from "./transliteration/HindiTyping";
+} from "./transliteration/PhoneticTyping";
+import { loadTypingMode, saveTypingMode } from "./transliteration/typingMode";
 import type { TypingMode } from "./transliteration/input";
 import DiagramAssistant from "./assistant/DiagramAssistant";
 import AssistantGhost from "./assistant/AssistantGhost";
@@ -89,8 +91,12 @@ export default function Editor() {
   const [ghost, setGhost] = useState<readonly ExcalidrawElement[] | null>(null);
   // One language choice drives menus and the default keyboard for canvas text.
   const [typingMode, setTypingMode] = useState<TypingMode>(() =>
-    defaultTypingMode(language),
+    loadTypingMode(language),
   );
+  const chooseTypingMode = (mode: TypingMode) => {
+    setTypingMode(mode);
+    saveTypingMode(language, mode);
+  };
   const editorLanguage = languageOptions.find(
     (l) => l.code === language,
   )!.editor;
@@ -125,7 +131,7 @@ export default function Editor() {
   const [modal, setModal] = useState<"templates" | "documents" | "name" | null>(
     null,
   );
-  const templateFilter = useTemplateFilter();
+  const templateFilter = useTemplateFilter(language);
   const [documents, setDocuments] = useState<Drawing[]>([]);
   const [onboard, setOnboard] = useState(false);
   const [cacheStatus, setCacheStatus] = useState(
@@ -253,7 +259,7 @@ export default function Editor() {
         } catch {
           /* A fresh document is still available. */
         }
-      id.current = target ?? crypto.randomUUID();
+      id.current = target ?? newId();
       try {
         const saved = target ? await getDrawing(target) : undefined;
         if (!active) return;
@@ -284,7 +290,7 @@ export default function Editor() {
             notify(
               "The requested drawing was not found. A new canvas has been opened.",
             );
-          id.current = crypto.randomUUID();
+          id.current = newId();
           setInitial({
             elements: template ? templateElements(template) : [],
             appState: { viewBackgroundColor: "#ffffff" },
@@ -311,7 +317,11 @@ export default function Editor() {
         if (!active) return;
         blocked.current = true;
         setError(
-          `Could not restore this drawing: ${saveError(e)}. The stored record has not been overwritten. Open another saved drawing or start a new one.`,
+          uiFill(
+            "Could not restore this drawing: {error} The stored record has not been overwritten. Open another saved drawing or start a new one.",
+            { error: ui(saveError(e), language) },
+            language,
+          ),
         );
         setStatus("Restore failed");
         setInitial({ elements: [] });
@@ -419,7 +429,7 @@ export default function Editor() {
   }
   async function newDrawing(templateId?: string) {
     if (!(await flush())) return;
-    const next = crypto.randomUUID();
+    const next = newId();
     location.href = templateId
       ? `/draw?template=${templateId}`
       : `/draw?id=${next}`;
@@ -437,11 +447,11 @@ export default function Editor() {
         null,
       );
       if (!(await flush())) return;
-      const newId = crypto.randomUUID();
+      const importedId = newId();
       const name =
         file.name.replace(/\.excalidraw$/i, "").slice(0, 120) || t("title");
       await saveDrawing({
-        id: newId,
+        id: importedId,
         title: name,
         scene: serializeAsJSON(
           restored.elements,
@@ -452,7 +462,7 @@ export default function Editor() {
         revision: Date.now(),
         updatedAt: Date.now(),
       });
-      location.href = `/draw?id=${newId}`;
+      location.href = `/draw?id=${importedId}`;
     } catch (e) {
       setError(saveError(e));
     } finally {
@@ -519,7 +529,7 @@ export default function Editor() {
           const svg = await exportToSvg({ elements, appState, files });
           if (
             elements.some(
-              (el) => el.type === "text" && /[\u0900-\u0c7f]/.test(el.text),
+              (el) => el.type === "text" && /[\u0900-\u0d7f]/.test(el.text),
             )
           )
             await embedIndicFonts(svg);
@@ -536,7 +546,9 @@ export default function Editor() {
       notify(
         format === "excalidraw"
           ? "Backup saved to your downloads."
-          : `${format.toUpperCase()} image saved to your downloads.`,
+          : format === "png"
+            ? "PNG image saved to your downloads."
+            : "SVG image saved to your downloads.",
       );
     } catch (e) {
       setError(saveError(e));
@@ -604,7 +616,7 @@ export default function Editor() {
             }
           }}
         >
-          <Brand />
+          <Brand language={language} />
         </span>
         <div className="title-group">
           <input
@@ -658,7 +670,7 @@ export default function Editor() {
             />
             <TypingModeSelect
               value={typingMode}
-              onChange={setTypingMode}
+              onChange={chooseTypingMode}
               language={language}
             />
           </div>
@@ -746,11 +758,11 @@ export default function Editor() {
           </div>
         )}
       </div>
-      <HindiTyping mode={typingMode} language={language} />
+      <PhoneticTyping mode={typingMode} language={language} />
       <div className="editor-workspace">
         <main
           className="editor-surface"
-          lang={editorLanguage}
+          lang={language}
           onDropCapture={(e) => {
             const file = e.dataTransfer.files[0];
             if (file && !file.type.startsWith("image/")) {
@@ -863,10 +875,12 @@ export default function Editor() {
             : ui("Offline · drawing stays on this device", language)}
         </span>
         <span role="status">{ui(cacheStatus, language)}</span>
-        {language === "te" && (
+        {language !== "en" && editorLanguage === "en" && (
           <span className="locale-note">
-            గమనిక: కొన్ని అధునాతన సాధనాల ఎంపికలు ఆంగ్లంలో కనిపిస్తాయి. (Some
-            advanced tool options use English.)
+            {ui(
+              "Note: some advanced tool options appear in English.",
+              language,
+            )}
           </span>
         )}
         <button
@@ -995,14 +1009,14 @@ export default function Editor() {
                       onClick={() => void newDrawing(template.id)}
                     >
                       <div className="template-art">
-                        <Diagram template={template} />
+                        <Diagram template={template} language={language} />
                       </div>
                       <div className="template-info">
                         <span className="eyebrow">
                           {ui(template.category, language)}
                         </span>
-                        <h3>{template.name}</h3>
-                        <p>{template.description}</p>
+                        <h3>{ui(template.name, language)}</h3>
+                        <p>{ui(template.description, language)}</p>
                       </div>
                     </button>
                   ))}

@@ -23,6 +23,9 @@ importers:
       '@fontsource/noto-sans-devanagari':
         specifier: ^5.3.0
         version: 5.3.0
+      '@fontsource/noto-sans-malayalam':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource/noto-sans-tamil':
         specifier: ^5.3.0
         version: 5.3.0
@@ -210,6 +213,9 @@ packages:
 
   '@fontsource/noto-sans-devanagari@5.3.0':
     resolution: {integrity: sha512-7khYmipS/5KAUUmrO1DKir8yL8XI00d0+ZE9BqbS8XF1jzObv6CpPOk3UeYxF+Pvi8bx9bBvprBCOcbx/eQWTQ==}
+
+  '@fontsource/noto-sans-malayalam@5.3.0':
+    resolution: {integrity: sha512-JVWpPkzNkbZTLradEAu8y5dDCgDsPLzvJrY1mEtt0NGG095aPyfhpTmq+wnGBBhvNRU9WEeATGI/w/YocbjQsg==}
 
   '@fontsource/noto-sans-tamil@5.3.0':
     resolution: {integrity: sha512-webid7fyBljiIEJ1hXuey48vCUe2Oq3/EwYjo6XBtXItO9FoUmqy0bEnXA5iE++iC324BTI8QMy80SYtDheCzA==}
@@ -2384,6 +2390,8 @@ snapshots:
   '@fontsource/noto-sans-bengali@5.3.0': {}
 
   '@fontsource/noto-sans-devanagari@5.3.0': {}
+
+  '@fontsource/noto-sans-malayalam@5.3.0': {}
 
   '@fontsource/noto-sans-tamil@5.3.0': {}
 

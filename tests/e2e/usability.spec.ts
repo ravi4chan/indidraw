@@ -51,9 +51,7 @@ test("Hindi choices float by the text and number keys pick one", async ({
   page,
 }) => {
   await open(page);
-  await page
-    .getByRole("combobox", { name: "Typing mode" })
-    .selectOption("hi-phonetic");
+  await page.locator(".typing-mode select").selectOption("hi-phonetic");
   await page
     .getByRole("radio", { name: "Text", exact: true })
     .check({ force: true });
@@ -62,7 +60,7 @@ test("Hindi choices float by the text and number keys pick one", async ({
   await page.keyboard.type("Bharat");
   const edit = page.locator(textarea);
   await expect(edit).toHaveValue("भारत");
-  const choices = page.getByRole("group", { name: "Hindi spelling choices" });
+  const choices = page.getByRole("group", { name: "Spelling choices" });
   await expect(choices).toBeVisible();
   // The popup sits just under the text box, not in a toolbar.
   const [box, popup] = [await edit.boundingBox(), await choices.boundingBox()];
@@ -119,10 +117,6 @@ test("home page switches language and carries it into the editor", async ({
   );
   await expect(page.locator("#languages")).toContainText("अपनी भाषा में");
   await page.goto("/draw");
-  await expect(
-    page.getByRole("combobox", { name: "Language", exact: true }),
-  ).toHaveValue("hi");
-  await expect(page.getByRole("combobox", { name: "Typing mode" })).toHaveValue(
-    "hi-phonetic",
-  );
+  await expect(page.locator(".language-selector select")).toHaveValue("hi");
+  await expect(page.locator(".typing-mode select")).toHaveValue("hi-phonetic");
 });

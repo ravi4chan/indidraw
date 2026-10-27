@@ -26,7 +26,7 @@ Follow up with `rename "Review" to "Check"`. Hindi labels work too: `वर्�
 
 Connect and rename address assistant-created shapes by their current bound label, including after native export/import or local reopening. Manual label edits are read from the canvas on the next preview. Hand-drawn elements are preserved and considered during placement. Native arrows have bindings on both ends so they follow ordinary canvas edits.
 
-Shape labels use the hand-drawn Excalifont, or the matching Noto font for labels written in an Indian script. The panel is translated into all six interface languages; detailed error messages are still English.
+Shape labels use the hand-drawn Excalifont, or the matching Noto font for labels written in an Indian script. The panel and its error messages are translated into all seven interface languages. Command keywords (`box`, `connect`, `rename … to …`) stay in English; flows written with arrows work with labels in any script.
 
 Known limits: commands use the grammar shown above; no pronouns, arbitrary prose, deletion, grouping or moving commands yet. Labels are limited to 120 UTF-16 code units and batches to 60 operations. Framed, rotated and locked assistant shapes cannot be edited by the adapter. A rename that enlarges a connected shape is rejected with instructions to resize it first. Placement is a conservative grid, not ELK layout. Small-screen panels overlay the canvas and can be closed.
 

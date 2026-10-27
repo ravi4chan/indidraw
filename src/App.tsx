@@ -24,15 +24,22 @@ import Diagram from "./Diagram";
 import { templates } from "./templates/data";
 import { useTemplateFilter, TemplateFilters } from "./templates/filters";
 import { repositoryUrl } from "./config";
+import { demoFor } from "./typingDemos";
 import {
   LanguageSelector,
   ui,
   useLanguage,
   type LanguageCode,
 } from "./i18n/languages";
-export function Brand({ compact = false }: { compact?: boolean }) {
+export function Brand({
+  compact = false,
+  language = "en",
+}: {
+  compact?: boolean;
+  language?: LanguageCode;
+}) {
   return (
-    <a href="/" className="brand" aria-label="IndiDraw home">
+    <a href="/" className="brand" aria-label={ui("IndiDraw home", language)}>
       <img className="brand-symbol" src="/branding/symbol.png" alt="" />
       {!compact && (
         <img
@@ -75,13 +82,13 @@ const features = [
   {
     icon: Globe2,
     title: "Your language, your script",
-    text: "Menus in six languages and bundled fonts for Devanagari, Telugu, Bengali and Tamil, so labels and exports look right.",
+    text: "Menus in seven languages and bundled fonts for Devanagari, Telugu, Bengali, Tamil and Malayalam, so labels and exports look right.",
     label: "Indian languages",
   },
   {
     icon: Keyboard,
-    title: "Type Hindi with any keyboard",
-    text: "Type namaste and get नमस्ते. Pick another spelling with one key, or use your device’s Hindi keyboard.",
+    title: "Type your language with any keyboard",
+    text: "Type namaste and get नमस्ते, or vanakkam and get வணக்கம். Pick another spelling with one key, or use your device’s own keyboard.",
     label: "Phonetic typing",
   },
   {
@@ -115,7 +122,7 @@ function Header({
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Brand />
+        <Brand language={language} />
         <nav
           aria-label={tr("Main navigation")}
           className={open ? "nav open" : "nav"}
@@ -169,7 +176,7 @@ function Footer({ language }: Page) {
     <footer>
       <div className="footer-main">
         <div>
-          <Brand />
+          <Brand language={language} />
           <p>{tr("Where ideas take shape.")}</p>
           <small>{tr("Made in India. Open to the World.")}</small>
         </div>
@@ -190,7 +197,7 @@ function Footer({ language }: Page) {
           <span className="footer-label">{tr("THE LITTLE THINGS")}</span>
           <a href="/privacy">{tr("Privacy")}</a>
           <a href="/terms">{tr("Terms")}</a>
-          <span className="founder">A Soldier’s Enterprise</span>
+          <span className="founder">{tr("A Soldier’s Enterprise")}</span>
         </div>
       </div>
       <div className="footer-bottom">
@@ -217,15 +224,15 @@ function TemplateCard({
       href={`/draw?template=${template.id}`}
     >
       <div className="template-art">
-        <Diagram template={template} />
+        <Diagram template={template} language={language} />
         <span className="template-open">
           <ArrowUpRight size={19} />
         </span>
       </div>
       <div className="template-info">
         <span className="eyebrow">{ui(template.category, language)}</span>
-        <h3>{template.name}</h3>
-        <p>{template.description}</p>
+        <h3>{ui(template.name, language)}</h3>
+        <p>{ui(template.description, language)}</p>
       </div>
     </a>
   );
@@ -236,8 +243,9 @@ function HeroPreview({ language }: Page) {
   return (
     <div className="preview-wrap">
       <span className="hand-note note-left" aria-hidden="true">
-        A little sketch.
-        <br />A world of possibilities.
+        {tr("A little sketch.")}
+        <br />
+        {tr("A world of possibilities.")}
         <svg viewBox="0 0 110 60">
           <path
             d="M5 3 Q10 50 95 32 M80 24 L98 33 L83 44"
@@ -255,11 +263,11 @@ function HeroPreview({ language }: Page) {
         <div className="preview-top">
           <div className="preview-title">
             <span className="preview-mark">i</span>
-            <span>My next big idea</span>
+            <span>{tr("My next big idea")}</span>
             <ChevronDown size={13} />
           </div>
           <span className="preview-saved">
-            <span /> Saved on this device
+            <span /> {tr("Saved on this device")}
           </span>
         </div>
         <div className="preview-canvas" aria-hidden="true">
@@ -279,29 +287,31 @@ function HeroPreview({ language }: Page) {
             <span>▧</span>
           </div>
           <div className="preview-side">
-            <span>Stroke</span>
+            <span>{tr("Stroke")}</span>
             <div className="swatches">
               <i />
               <i />
               <i />
               <i />
             </div>
-            <span>Background</span>
+            <span>{tr("Background")}</span>
             <div className="swatches background">
               <i />
               <i />
               <i />
               <i />
             </div>
-            <span>Stroke width</span>
+            <span>{tr("Stroke width")}</span>
             <div className="stroke-demo">— &nbsp;━ &nbsp;▬</div>
-            <span>Sloppiness</span>
+            <span>{tr("Sloppiness")}</span>
             <div className="stroke-demo">╱ &nbsp;∿ &nbsp;〰</div>
           </div>
           <div className="preview-board">
-            <span className="board-caption">Let’s make something great.</span>
-            <Diagram template={templates[0]} hero />
-            <span className="board-note">it all starts here ✧</span>
+            <span className="board-caption">
+              {tr("Let’s make something great.")}
+            </span>
+            <Diagram template={templates[0]} hero language={language} />
+            <span className="board-note">{tr("it all starts here ✧")}</span>
           </div>
           <div className="preview-zoom">
             − <span>100%</span> +
@@ -312,9 +322,9 @@ function HeroPreview({ language }: Page) {
         </span>
       </a>
       <span className="hand-note note-right" aria-hidden="true">
-        Your next big idea
+        {tr("Your next big idea")}
         <br />
-        belongs here.
+        {tr("belongs here.")}
         <svg viewBox="0 0 100 55">
           <path
             d="M90 2 Q85 45 8 32 M22 23 L6 33 L20 43"
@@ -327,29 +337,28 @@ function HeroPreview({ language }: Page) {
     </div>
   );
 }
-const typingDemo = [
-  ["namaste", "नमस्ते"],
-  ["bharat", "भारत"],
-  ["vidyalaya", "विद्यालय"],
-  ["paani", "पानी"],
-] as const;
-/** Shows phonetic typing: English letters become Hindi as you type. */
-function TypingDemo() {
+/** Shows phonetic typing: English letters become the chosen script. */
+function TypingDemo({ language }: Page) {
+  const demo = demoFor(language);
   const [step, setStep] = useState(0);
   useEffect(() => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = setInterval(() => setStep((s) => s + 1), 2200);
     return () => clearInterval(timer);
   }, []);
-  const [roman, hindi] = typingDemo[step % typingDemo.length];
+  const [roman, native] = demo[step % demo.length];
   return (
-    <div className="typing-demo" role="img" aria-label="namaste → नमस्ते">
+    <div
+      className="typing-demo"
+      role="img"
+      aria-label={`${demo[0][0]} → ${demo[0][1]}`}
+    >
       <span className="typing-key" aria-hidden="true">
         {roman}
       </span>
       <ArrowRight size={22} aria-hidden="true" />
-      <span className="typing-result" key={hindi} aria-hidden="true">
-        {hindi}
+      <span className="typing-result" key={native} aria-hidden="true">
+        {native}
       </span>
     </div>
   );
@@ -431,14 +440,14 @@ function Home({ language }: Page) {
           <h2>{tr("Draw and write in your own language.")}</h2>
           <p>
             {tr(
-              "Switch the whole app to Hindi, Telugu, Bengali, Tamil or Marathi. Type Hindi with English letters and IndiDraw writes it in Devanagari. Labels and exports keep the right font for each script.",
+              "Switch the whole app to Hindi, Telugu, Bengali, Tamil, Marathi or Malayalam. Type with English letters and IndiDraw writes your language in its own script. Labels and exports keep the right font for each script.",
             )}
           </p>
           <a className="button primary" href="/draw">
             {tr("Try it now")} <ArrowRight size={18} />
           </a>
         </div>
-        <TypingDemo />
+        <TypingDemo language={language} />
       </section>
       <section className="use-cases">
         <span>{tr("FOR THE WAY YOU THINK")}</span>
@@ -535,7 +544,7 @@ function Home({ language }: Page) {
 }
 function Gallery({ language }: Page) {
   const tr = (text: string) => ui(text, language);
-  const filter = useTemplateFilter();
+  const filter = useTemplateFilter(language);
   return (
     <main className="section gallery">
       <span className="eyebrow">
@@ -645,61 +654,64 @@ const legal: Record<string, { title: string; sections: [string, string][] }> = {
     ],
   },
 };
-function About() {
+function About({ language }: Page) {
+  const tr = (text: string) => ui(text, language);
   return (
     <main className="about-page">
       <section className="about-hero section">
-        <span className="eyebrow">MADE IN INDIA. OPEN TO THE WORLD.</span>
+        <span className="eyebrow">
+          {tr("MADE IN INDIA. OPEN TO THE WORLD.")}
+        </span>
         <h1>
-          A little space.
+          {tr("A little space.")}
           <br />
-          <span>A world of ideas.</span>
+          <span>{tr("A world of ideas.")}</span>
         </h1>
         <p>
-          We believe visual thinking should be for everyone.
+          {tr("We believe visual thinking should be for everyone.")}
           <br />
-          IndiDraw makes it simple to get an idea out of your head and onto a
-          canvas.
+          {tr(
+            "IndiDraw makes it simple to get an idea out of your head and onto a canvas.",
+          )}
         </p>
       </section>
       <div className="prose">
-        <h2>Useful technology, accessible to all.</h2>
+        <h2>{tr("Useful technology, accessible to all.")}</h2>
         <p>
-          IndiDraw is an independent, India-origin visual whiteboarding
-          initiative. It combines a simple, welcoming workspace with the
-          open-source Excalidraw drawing engine, keeping the core drawing
-          experience free and available without an account.
+          {tr(
+            "IndiDraw is an independent, India-origin visual whiteboarding initiative. It combines a simple, welcoming workspace with the open-source Excalidraw drawing engine, keeping the core drawing experience free and available without an account.",
+          )}
         </p>
-        <h2>Your canvas. Your control.</h2>
+        <h2>{tr("Your canvas. Your control.")}</h2>
         <p>
-          Work is saved on your device. You can create offline after the
-          application is cached, export your files, and take them to a
-          compatible editor. We aim for WCAG 2.2 AA in our custom interface and
-          welcome feedback on making visual thinking more accessible.
+          {tr(
+            "Work is saved on your device. You can create offline after the application is cached, export your files, and take them to a compatible editor. We aim for WCAG 2.2 AA in our custom interface and welcome feedback on making visual thinking more accessible.",
+          )}
         </p>
         <section className="founder-story">
-          <span className="eyebrow">DISCIPLINE. SERVICE. POSSIBILITY.</span>
-          <h2>A Soldier’s Enterprise</h2>
+          <span className="eyebrow">
+            {tr("DISCIPLINE. SERVICE. POSSIBILITY.")}
+          </span>
+          <h2>{tr("A Soldier’s Enterprise")}</h2>
           <p>
-            IndiDraw is an independent initiative founded on the belief that
-            useful technology should be accessible to everyone. Inspired by the
-            values of discipline, service, and problem-solving, it aims to make
-            visual thinking simple, free, and open to people everywhere.
+            {tr(
+              "IndiDraw is an independent initiative founded on the belief that useful technology should be accessible to everyone. Inspired by the values of discipline, service, and problem-solving, it aims to make visual thinking simple, free, and open to people everywhere.",
+            )}
           </p>
           <small>
-            IndiDraw is not affiliated with or endorsed by the Indian Army or
-            Government of India.
+            {tr(
+              "IndiDraw is not affiliated with or endorsed by the Indian Army or Government of India.",
+            )}
           </small>
         </section>
-        <h2>Free to Draw. Open to Everyone.</h2>
+        <h2>{tr("Free to Draw. Open to Everyone.")}</h2>
         <p>
-          The free editor comes first. Future optional cloud services may
-          support this work, but ordinary drawing will not require a
-          subscription. Our next step is a reliable, community-tested
-          foundation.
+          {tr(
+            "The free editor comes first. Future optional cloud services may support this work, but ordinary drawing will not require a subscription. Our next step is a reliable, community-tested foundation.",
+          )}
         </p>
         <a className="button primary" href="/draw">
-          Find your canvas <ArrowRight size={17} />
+          {tr("Find your canvas")} <ArrowRight size={17} />
         </a>
       </div>
     </main>
@@ -718,19 +730,24 @@ export default function App() {
       <Header language={language} setLanguage={setLanguage} />
       <div
         id="main"
-        // Only the home page and gallery are translated so far.
-        lang={path === "/" || path === "/templates" ? language : "en"}
+        // Legal pages stay in English until reviewed translations exist.
+        lang={page ? "en" : language}
       >
         {path === "/" ? (
           <Home language={language} />
         ) : path === "/templates" ? (
           <Gallery language={language} />
         ) : path === "/about" ? (
-          <About />
+          <About language={language} />
         ) : page ? (
           <main className="prose legal-page">
             <span className="eyebrow">INDIDRAW / {path.slice(1)}</span>
             <h1>{page.title}</h1>
+            {language !== "en" && (
+              <p className="locale-note" lang={language}>
+                {ui("This page is available in English only.", language)}
+              </p>
+            )}
             {page.sections.map(([title, body]) => (
               <section key={title}>
                 <h2>{title}</h2>
@@ -740,9 +757,9 @@ export default function App() {
           </main>
         ) : (
           <main className="prose legal-page">
-            <h1>This page wandered off.</h1>
+            <h1>{ui("This page wandered off.", language)}</h1>
             <a className="button primary" href="/">
-              Back home <ArrowRight size={17} />
+              {ui("Back home", language)} <ArrowRight size={17} />
             </a>
           </main>
         )}

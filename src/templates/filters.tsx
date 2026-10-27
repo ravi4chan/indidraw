@@ -13,7 +13,7 @@ export const templateCategories = [
 ] as const;
 export type TemplateCategory = (typeof templateCategories)[number];
 
-export function useTemplateFilter() {
+export function useTemplateFilter(language: LanguageCode = "en") {
   const [category, setCategory] = useState<TemplateCategory>("All templates");
   const [query, setQuery] = useState("");
   const needle = query.trim().toLocaleLowerCase();
@@ -23,7 +23,10 @@ export function useTemplateFilter() {
         (category === "In Hindi"
           ? t.language === "hi"
           : t.category === category)) &&
-      `${t.name} ${t.description} ${t.category}`
+      // Match both the English and the translated wording.
+      [t.name, t.description, t.category]
+        .flatMap((text) => [text, ui(text, language)])
+        .join(" ")
         .toLocaleLowerCase()
         .includes(needle),
   );

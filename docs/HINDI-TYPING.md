@@ -1,4 +1,8 @@
-# Hindi phonetic typing
+# Phonetic typing
+
+Phonetic typing now covers Hindi, Telugu, Bengali, Tamil, Marathi and Malayalam. The app language picks the matching keyboard (choosing Tamil types Tamil); a different choice made in the keyboard control is remembered per app language. Hindi uses `hindi.ts`; the other languages share the rule engine in `indic.ts` plus everyday spellings in `dictionaries.ts`. Examples: `telugu` → తెలుగు, `pustakam` → పుస్తకం, `ami` → আমি, `bhalo` → ভালো, `tamizh` → தமிழ், `nanri` → நன்றி, `ghar` → घर, `paani` (Marathi) → पाणी, `avan` → അവൻ, `ente` → എന്റെ. The rest of this page describes Hindi; the controls work the same way for every language.
+
+## Hindi
 
 Type Hindi on the canvas with an ordinary English keyboard. Words are converted to Devanagari as you type, entirely on the device.
 
