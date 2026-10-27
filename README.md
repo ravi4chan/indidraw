@@ -55,9 +55,9 @@ What sets it apart is first-class support for Indian languages. The interface is
 
 **Indian languages**
 
-- Interface in English, हिन्दी, తెలుగు, বাংলা, தமிழ் and मराठी, shared by the website and editor
-- Hindi phonetic typing with spelling choices beside the word; press 1–9 to pick one
-- Five selectable canvas fonts (Noto Sans Devanagari, Telugu, Bengali, Tamil; Noto Serif Devanagari for Marathi)
+- Interface in English, हिन्दी, తెలుగు, বাংলা, தமிழ், मराठी and മലയാളം, shared by the website and editor
+- Offline phonetic typing for Hindi, Telugu, Bengali, Tamil, Marathi and Malayalam, with spelling choices beside the word; press 1–9 to pick one
+- Six selectable canvas fonts (Noto Sans Devanagari, Telugu, Bengali, Tamil, Malayalam; Noto Serif Devanagari for Marathi)
 
 </td>
 <td valign="top">
@@ -117,16 +117,17 @@ pnpm preview --port 4173
 
 Choose a language from the menu at the top of the site or editor; the choice is remembered on the device and shared between them.
 
-| Language      | Interface                                                 | Canvas font           | Typing                                |
-| ------------- | --------------------------------------------------------- | --------------------- | ------------------------------------- |
-| English       | Full                                                      | Excalidraw defaults   | Keyboard                              |
-| हिन्दी Hindi  | Full                                                      | Noto Sans Devanagari  | Phonetic (default) or device keyboard |
-| తెలుగు Telugu | Full; some advanced Excalidraw menus fall back to English | Noto Sans Telugu      | Device keyboard                       |
-| বাংলা Bengali | Full                                                      | Noto Sans Bengali     | Device keyboard                       |
-| தமிழ் Tamil   | Full                                                      | Noto Sans Tamil       | Device keyboard                       |
-| मराठी Marathi | Full                                                      | Noto Serif Devanagari | Hindi phonetic or device keyboard     |
+| Language         | Interface                                                | Canvas font           | Typing                                |
+| ---------------- | -------------------------------------------------------- | --------------------- | ------------------------------------- |
+| English          | Full                                                     | Excalidraw defaults   | Keyboard                              |
+| हिन्दी Hindi     | Full                                                     | Noto Sans Devanagari  | Phonetic (default) or device keyboard |
+| తెలుగు Telugu    | Full; a few advanced Excalidraw messages stay in English | Noto Sans Telugu      | Phonetic (default) or device keyboard |
+| বাংলা Bengali    | Full                                                     | Noto Sans Bengali     | Phonetic (default) or device keyboard |
+| தமிழ் Tamil      | Full                                                     | Noto Sans Tamil       | Phonetic (default) or device keyboard |
+| मराठी Marathi    | Full                                                     | Noto Serif Devanagari | Phonetic (default) or device keyboard |
+| മലയാളം Malayalam | Full; a few advanced Excalidraw messages stay in English | Noto Sans Malayalam   | Phonetic (default) or device keyboard |
 
-**Typing Hindi phonetically.** Pick the text tool, click the canvas and type with English letters. Each word becomes Devanagari as you type, and a small panel under the word offers other spellings: press <kbd>Space</kbd> to keep the first, or <kbd>1</kbd>–<kbd>9</kbd> to choose another. Transliteration happens on the device; nothing is sent anywhere. See [docs/HINDI-TYPING.md](docs/HINDI-TYPING.md).
+**Typing phonetically.** Pick the text tool, click the canvas and type with English letters: `namaste` → नमस्ते, `telugu` → తెలుగు, `bangla` → বাংলা, `vanakkam` → வணக்கம், `pustak` → पुस्तक, `malayalam` → മലയാളം. Each word becomes your language's script as you type, and a small panel under the word offers other spellings: press <kbd>Space</kbd> to keep the first, or <kbd>1</kbd>–<kbd>9</kbd> to choose another. Transliteration happens on the device; nothing is sent anywhere. See [docs/HINDI-TYPING.md](docs/HINDI-TYPING.md).
 
 Translations are initial versions; native-speaker review is welcome. Terminology decisions and sources are recorded in [docs/LOCALIZATION.md](docs/LOCALIZATION.md).
 
@@ -160,7 +161,7 @@ src/
   App.tsx               Website: home, templates gallery, about and policy pages
   editor/               Excalidraw wrapper: header, File menu, saving, import/export
     assistant/          Diagram assistant: command protocol, scene adapter, preview
-    transliteration/    Hindi phonetic typing engine and input adapter
+    transliteration/    Phonetic typing engines (six languages) and input adapter
   i18n/                 Language selection and translations (UI and site)
   storage/              IndexedDB drawings and personal library
   templates/            Template data and filters

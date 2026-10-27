@@ -1,6 +1,6 @@
 # Indian languages: translations, fonts and typography
 
-IndiDraw's interface is available in English, Hindi, Telugu, Bengali, Tamil and Marathi. This document records how text is translated, which fonts are used and how Indian scripts are typeset.
+IndiDraw's interface is available in English, Hindi, Telugu, Bengali, Tamil, Marathi and Malayalam. This document records how text is translated, which fonts are used and how Indian scripts are typeset.
 
 ## Editor terminology
 
@@ -49,7 +49,7 @@ The version-pinned Vite adapter exposes Excalidraw’s existing font registry an
 
 The language menu appears in both the website header and the editor, and both read and write the same `indidraw-language` setting, so a choice on the home page carries into the editor.
 
-- Interface text lives in `src/i18n/languages.tsx` (editor basics) and `src/i18n/siteStrings.ts` (home page, gallery, File menu, assistant, typing). Each row holds English, Hindi, Telugu, Bengali, Tamil and Marathi, in that order.
+- Interface text lives in `src/i18n/languages.tsx` (editor basics) and `src/i18n/siteStrings.ts` (home page, gallery, File menu, assistant, typing). Each row holds English, Hindi, Telugu, Bengali, Tamil and Marathi, in that order; Malayalam for those rows is in `src/i18n/malayalam.ts`. Newer strings live in `src/i18n/moreStrings.ts` with all seven columns. `tests/i18nCoverage.test.ts` extracts every interface string from the source and fails if any language is missing. Telugu and Malayalam Excalidraw menus come from `src/i18n/editorLocales.ts`. All non-English text added in this round was drafted without native-speaker review.
 - `ui(english, language)` looks up a string and falls back to English when a translation is missing.
 - The home page and template gallery are translated. About, Privacy, Terms, License and Contributing pages are English and marked `lang="en"`.
 - Template names and descriptions are content, not interface text, and are not translated. Three templates are written in Hindi.
